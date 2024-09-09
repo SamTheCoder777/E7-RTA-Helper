@@ -76,9 +76,9 @@ func _ready():
 			python_script_path = "server.py"
 			
 		"macOS":
-			python_exe_path = "python_mac/install/bin/.venv/bin/python3.11"
-			python_search_script_path = "search_server_mac.py"	
-			python_script_path = "server_mac.py"
+			python_exe_path = "res://python_mac/install/bin/.venv/bin/python3.11"
+			python_search_script_path = "res://search_server_mac.py"	
+			python_script_path = "res://server_mac.py"
 	
 	# Load all csvs
 	hero_match_data = read_csv("data/epic7_hero_stats.csv")
