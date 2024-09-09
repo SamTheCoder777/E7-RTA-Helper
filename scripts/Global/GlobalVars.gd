@@ -45,7 +45,7 @@ var status_connected_num = 0
 func read_csv(path: String):
 	var rows = []
 	var file = FileAccess.open(path, FileAccess.READ)
-	while !file.eof_reached():
+	while file and !file.eof_reached():
 		var csv_rows = file.get_csv_line(",")
 		rows.append(csv_rows)
 	file.close()
