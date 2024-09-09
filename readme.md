@@ -147,6 +147,7 @@ You will need to play a game of RTA to set up the program
 
 Now you are ready! 
 Press `Start Detection` on the front page to get started
+and make sure to set `First Pick` from the drop down menu
 
 > [!TIP]
 > Press `esc` when you are done drafting to turn the tool to idle mode and prevent lag
