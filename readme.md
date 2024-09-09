@@ -183,6 +183,7 @@ and make sure to set `First Pick` from the drop down menu
 - [ ] Make a settings for detection boundary so the user can lower or increase if character is not being detected properly
 - [ ] Meta tracker
 - [ ] Profile review page
+- [ ] Auto update user stats
 
 See the [open issues](https://github.com/SamTheCoder777/E7-RTA-Helper/issues) for a full list of proposed features (and known issues).
 
