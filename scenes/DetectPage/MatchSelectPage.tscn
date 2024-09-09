@@ -1,0 +1,86 @@
+[gd_scene load_steps=7 format=3 uid="uid://bke2olb466sdq"]
+
+[ext_resource type="Script" path="res://scripts/DetectPage/MatchSelectPage.gd" id="1_6x42b"]
+[ext_resource type="PackedScene" uid="uid://daslk60gfw8pp" path="res://scenes/DetectPage/MatchSelect.tscn" id="2_xy05l"]
+[ext_resource type="PackedScene" uid="uid://cv8gfcsq78tc6" path="res://scenes/Stats/EnemyPickStats.tscn" id="3_7p0qc"]
+[ext_resource type="PackedScene" uid="uid://wan04g3gunep" path="res://scenes/Stats/UserStats.tscn" id="4_75b72"]
+[ext_resource type="PackedScene" uid="uid://bfdo7e51htoq2" path="res://scenes/Stats/UserPickData.tscn" id="5_mtif7"]
+[ext_resource type="PackedScene" uid="uid://b4jgu08424yah" path="res://scenes/Misc/PauseScreen.tscn" id="6_sb56w"]
+
+[node name="MatchSelectPage" type="Node2D"]
+script = ExtResource("1_6x42b")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MatchSelect" parent="CanvasLayer" instance=ExtResource("2_xy05l")]
+
+[node name="WinPredictionBar" parent="CanvasLayer/MatchSelect/Container/ColorRect" index="1"]
+anchor_top = 0.440334
+anchor_bottom = 0.455334
+
+[node name="EnemyPortraits" parent="CanvasLayer/MatchSelect/Container/ColorRect/MarginContainer2/RealTimeEnemyDetection" index="2"]
+offset_left = -5.84
+offset_top = 1.78
+offset_right = 68.56
+offset_bottom = 14.22
+
+[node name="EnemyPickStats" parent="CanvasLayer" instance=ExtResource("3_7p0qc")]
+anchor_left = 0.517
+anchor_top = 0.568
+anchor_right = 0.95
+anchor_bottom = 0.943
+offset_left = -0.300018
+offset_top = 0.399978
+offset_right = -4.29153e-05
+offset_bottom = 0.399978
+
+[node name="UserStats" parent="CanvasLayer" instance=ExtResource("4_75b72")]
+anchor_left = 0.064
+anchor_top = 0.117
+anchor_right = 0.97
+anchor_bottom = 0.444
+offset_left = 0.399997
+offset_top = -0.400007
+offset_right = -2.57492e-05
+offset_bottom = 0.199957
+
+[node name="UserPickData" parent="CanvasLayer" instance=ExtResource("5_mtif7")]
+anchor_left = 0.075
+anchor_top = 0.558
+anchor_right = 0.481
+anchor_bottom = 0.968
+offset_left = 41.5
+offset_top = 103.4
+offset_right = 20.1
+offset_bottom = -72.6001
+scale = Vector2(0.85, 0.85)
+
+[node name="FirstPickSelector" type="OptionButton" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.364
+anchor_top = 0.465
+anchor_right = 0.526
+anchor_bottom = 0.491
+offset_left = 0.400007
+offset_top = 0.999996
+offset_right = -0.400021
+offset_bottom = 0.800004
+alignment = 1
+item_count = 3
+selected = 0
+popup/item_0/text = "First Pick"
+popup/item_0/id = 0
+popup/item_0/disabled = true
+popup/item_0/separator = true
+popup/item_1/text = "My Team"
+popup/item_1/id = 1
+popup/item_2/text = "Enemy Team"
+popup/item_2/id = 2
+
+[node name="PauseScreen" parent="CanvasLayer" instance=ExtResource("6_sb56w")]
+top_level = true
+
+[connection signal="pressed" from="CanvasLayer/MatchSelect/Container/ColorRect/VBoxContainer/HBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="item_selected" from="CanvasLayer/FirstPickSelector" to="." method="_on_first_pick_selector_selected"]
+
+[editable path="CanvasLayer/MatchSelect"]

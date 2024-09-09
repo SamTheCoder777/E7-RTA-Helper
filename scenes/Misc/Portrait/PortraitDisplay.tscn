@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://dt154ln4shap2"]
+
+[ext_resource type="Texture2D" uid="uid://dugeqm4efp05v" path="res://UI/MatchSelect/unknown_hero.png" id="1_s2tko"]
+[ext_resource type="Script" path="res://scripts/Misc/Portrait/PortraitDisplay.gd" id="2_foxat"]
+
+[node name="PortraitDisplay" type="TextureRect"]
+anchors_preset = -1
+anchor_bottom = 0.052
+offset_right = 62.0
+offset_bottom = -0.400002
+mouse_default_cursor_shape = 2
+texture = ExtResource("1_s2tko")
+expand_mode = 1
+stretch_mode = 4
+script = ExtResource("2_foxat")
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+shortcut_in_tooltip = false
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

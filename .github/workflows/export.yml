@@ -1,0 +1,83 @@
+# Trigger the workflow on push tags matching "v*"
+on:
+  # Manually trigger the workflow
+  workflow_dispatch:
+
+jobs:
+  export_game:
+    runs-on: ubuntu-latest
+    permissions: write-all
+    name: Export Game
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+        # Download rcedit
+      - name: Download rcedit
+        run: |
+          wget https://github.com/electron/rcedit/releases/download/v2.0.0/rcedit-x64.exe
+          mv rcedit-x64.exe ~/
+          
+      # Download wine
+      - name: install wine
+        run: |
+          sudo dpkg --add-architecture i386
+          wget -qO - https://dl.winehq.org/wine-builds/winehq.key | sudo apt-key add -
+          sudo add-apt-repository ppa:cybermax-dexter/sdl2-backport
+          sudo apt-add-repository "deb https://dl.winehq.org/wine-builds/ubuntu $(lsb_release -cs) main"
+          sudo apt install --install-recommends winehq-stable
+          
+      # Download Godot executable for headless operation
+      - name: Download Godot executable
+        run: |
+          wget https://downloads.tuxfamily.org/godotengine/4.2.2/Godot_v4.2.2-stable_linux.x86_64.zip
+          unzip Godot_v4.2.2-stable_linux.x86_64.zip -d godot_headless
+
+      # Download the Godot export templates
+      - name: Download Godot export templates
+        run: |
+          wget https://downloads.tuxfamily.org/godotengine/4.2.2/Godot_v4.2.2-stable_export_templates.tpz
+          mkdir -p ~/.local/share/godot/export_templates/4.2.2.stable/
+          mkdir -p godot_export_templates
+          unzip Godot_v4.2.2-stable_export_templates.tpz -d godot_export_templates
+          cp godot_export_templates/templates/* ~/.local/share/godot/export_templates/4.2.2.stable/
+
+      # Run Godot headless to generate the .godot file for windows
+      - name: Generate .godot cache file
+        run: |
+          ./godot_headless/Godot_v4.2.2-stable_linux.x86_64 --path . --headless --export-release "Windows Desktop" "E7RTAHelper.exe"
+
+      # Remove godot headless
+      - name: Remove godot
+        run: |
+          rm -r godot_headless
+          rm -r godot_export_templates
+          rm Godot_v4.2.2-stable_linux.x86_64.zip
+          rm Godot_v4.2.2-stable_export_templates.tpz
+
+      # Change executable icon
+      - name: Change icon
+        run: |
+          convert icon.png -define icon:auto-resize=256,128,64,48,32,16 icon.ico
+          wine ~/rcedit-x64.exe E7RTAHelper.exe --set-icon icon.ico
+
+      # Install 7zip
+      - name: Install 7zip
+        run: |
+          sudo apt install p7zip-full p7zip-rar
+          
+      # Create a ZIP file containing the entire project
+      - name: Create ZIP/TAR package of the entire project
+        run: |
+          zip -r ../E7RTAHelper.zip ./*
+          7z a ../E7RTAHelper.7z ./*
+
+      # Create a release on GitHub with the ZIP file
+      - name: Create release
+        uses: ncipollo/release-action@v1.14.0
+        with:
+          generateReleaseNotes: true
+          tag: ${{ github.ref_name }}
+          artifacts: "../E7RTAHelper.zip,../E7RTAHelper.7z"
+          allowUpdates: true

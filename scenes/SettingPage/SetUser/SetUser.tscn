@@ -1,0 +1,100 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpo5aluturmsw"]
+
+[ext_resource type="Script" path="res://scripts/SettingPage/SetUser/SetUser.gd" id="1_iqr1d"]
+[ext_resource type="FontFile" uid="uid://dxul5lyctep67" path="res://fonts/Poppins-Bold.ttf" id="1_kuys7"]
+
+[node name="SetUser" type="Window"]
+title = "Set User"
+initial_position = 4
+size = Vector2i(900, 500)
+script = ExtResource("1_iqr1d")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.137255, 0.137255, 0.137255, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 27
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+custom_minimum_size = Vector2(2.08165e-12, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_kuys7")
+theme_override_font_sizes/font_size = 30
+text = "Set User"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+item_count = 6
+selected = 0
+popup/item_0/text = "Servers"
+popup/item_0/id = 0
+popup/item_0/separator = true
+popup/item_1/text = "Korea"
+popup/item_1/id = 1
+popup/item_2/text = "Asia"
+popup/item_2/id = 2
+popup/item_3/text = "Global"
+popup/item_3/id = 3
+popup/item_4/text = "Europe"
+popup/item_4/id = 4
+popup/item_5/text = "Japan"
+popup/item_5/id = 5
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(130, 2.08165e-12)
+layout_mode = 2
+placeholder_text = "Username"
+alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 2.08165e-12)
+layout_mode = 2
+text = "Set"
+
+[node name="ResetButton" type="Button" parent="VBoxContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 2.08165e-12)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "Reset"
+
+[node name="ErrorMessageLabel" type="RichTextLabel" parent="VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(2.08165e-12, 30)
+layout_mode = 2
+bbcode_enabled = true
+text = "[center][color=red]Please Select Your Server[/color][center]"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "[center]Choose your server and enter in your username. 
+
+When you press Set, it will open up a 
+browser to search your user data[/center]"
+
+[connection signal="close_requested" from="." to="." method="_on_close_requested"]
+[connection signal="item_selected" from="VBoxContainer/MarginContainer/HBoxContainer/OptionButton" to="." method="_on_option_button_item_selected"]
+[connection signal="text_changed" from="VBoxContainer/MarginContainer/HBoxContainer/LineEdit" to="." method="_on_line_edit_text_changed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer/HBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer/HBoxContainer/ResetButton" to="." method="_on_reset_button_pressed"]

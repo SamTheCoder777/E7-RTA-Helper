@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgphhynugd8w2"]
+
+[ext_resource type="Script" path="res://scripts/CharacterDesc/StaticPortrait.gd" id="1_gmh1k"]
+[ext_resource type="Texture2D" uid="uid://c2xhupiaug2kp" path="res://UI/Misc/SoulImg.png" id="3_vnsac"]
+
+[node name="StaticPortrait" type="TextureRect"]
+anchors_preset = -1
+anchor_right = 0.091
+anchor_bottom = 0.069
+offset_top = -1.0
+offset_right = 0.0999985
+offset_bottom = 0.199997
+script = ExtResource("1_gmh1k")
+
+[node name="Container" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Container"]
+layout_mode = 2
+theme_override_constants/separation = -32
+alignment = 2
+
+[node name="Soul1" type="TextureRect" parent="Container/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(24, 32)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 0
+texture = ExtResource("3_vnsac")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Soul2" type="TextureRect" parent="Container/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(24, 32)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 0
+texture = ExtResource("3_vnsac")
+expand_mode = 1
+stretch_mode = 4
+
+[connection signal="SetPortrait" from="." to="." method="_on_set_portrait"]
+[connection signal="SetSouls" from="." to="." method="_on_set_souls"]

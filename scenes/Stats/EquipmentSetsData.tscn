@@ -1,0 +1,176 @@
+[gd_scene load_steps=2 format=3 uid="uid://bw8wy7tv0dfkq"]
+
+[ext_resource type="FontFile" uid="uid://dxul5lyctep67" path="res://fonts/Poppins-Bold.ttf" id="1_w8cjl"]
+
+[node name="EquipmentSetsData" type="Control"]
+layout_mode = 3
+anchor_right = 0.356
+anchor_bottom = 0.146
+offset_right = -0.399994
+offset_bottom = -0.200012
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBox" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 9
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBox"]
+layout_mode = 2
+theme_override_constants/separation = 11
+
+[node name="Label" type="Label" parent="HBox/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_w8cjl")
+theme_override_font_sizes/font_size = 15
+text = "1."
+
+[node name="Label2" type="Label" parent="HBox/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_w8cjl")
+theme_override_font_sizes/font_size = 15
+text = "2."
+
+[node name="Label3" type="Label" parent="HBox/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_w8cjl")
+theme_override_font_sizes/font_size = 15
+text = "3."
+
+[node name="Label4" type="Label" parent="HBox/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_w8cjl")
+theme_override_font_sizes/font_size = 15
+text = "4."
+
+[node name="Label5" type="Label" parent="HBox/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_w8cjl")
+theme_override_font_sizes/font_size = 15
+text = "5."
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBox"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBox/VBoxContainer2"]
+clip_contents = true
+layout_mode = 2
+
+[node name="EquipPortrait1" type="TextureRect" parent="HBox/VBoxContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(27, 28)
+layout_mode = 2
+expand_mode = 2
+
+[node name="EquipPortrait2" type="TextureRect" parent="HBox/VBoxContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(27, 28)
+layout_mode = 2
+expand_mode = 2
+
+[node name="EquipPortrait3" type="TextureRect" parent="HBox/VBoxContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(27, 28)
+layout_mode = 2
+expand_mode = 2
+
+[node name="Winrate1" type="Label" parent="HBox/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_w8cjl")
+theme_override_font_sizes/font_size = 15
+text = "Win Rate 47.02%"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HBox/VBoxContainer2"]
+layout_mode = 2
+
+[node name="EquipPortrait1" type="TextureRect" parent="HBox/VBoxContainer2/HBoxContainer2"]
+custom_minimum_size = Vector2(27, 28)
+layout_mode = 2
+expand_mode = 2
+
+[node name="EquipPortrait2" type="TextureRect" parent="HBox/VBoxContainer2/HBoxContainer2"]
+custom_minimum_size = Vector2(27, 28)
+layout_mode = 2
+expand_mode = 2
+
+[node name="EquipPortrait3" type="TextureRect" parent="HBox/VBoxContainer2/HBoxContainer2"]
+custom_minimum_size = Vector2(27, 28)
+layout_mode = 2
+expand_mode = 2
+
+[node name="Winrate2" type="Label" parent="HBox/VBoxContainer2/HBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_w8cjl")
+theme_override_font_sizes/font_size = 15
+text = "Win Rate 47.02%"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="HBox/VBoxContainer2"]
+layout_mode = 2
+
+[node name="EquipPortrait1" type="TextureRect" parent="HBox/VBoxContainer2/HBoxContainer3"]
+custom_minimum_size = Vector2(27, 28)
+layout_mode = 2
+expand_mode = 2
+
+[node name="EquipPortrait2" type="TextureRect" parent="HBox/VBoxContainer2/HBoxContainer3"]
+custom_minimum_size = Vector2(27, 28)
+layout_mode = 2
+expand_mode = 2
+
+[node name="EquipPortrait3" type="TextureRect" parent="HBox/VBoxContainer2/HBoxContainer3"]
+custom_minimum_size = Vector2(27, 28)
+layout_mode = 2
+expand_mode = 2
+
+[node name="Winrate3" type="Label" parent="HBox/VBoxContainer2/HBoxContainer3"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_w8cjl")
+theme_override_font_sizes/font_size = 15
+text = "Win Rate 47.02%"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="HBox/VBoxContainer2"]
+layout_mode = 2
+
+[node name="EquipPortrait1" type="TextureRect" parent="HBox/VBoxContainer2/HBoxContainer4"]
+custom_minimum_size = Vector2(27, 28)
+layout_mode = 2
+expand_mode = 2
+
+[node name="EquipPortrait2" type="TextureRect" parent="HBox/VBoxContainer2/HBoxContainer4"]
+custom_minimum_size = Vector2(27, 28)
+layout_mode = 2
+expand_mode = 2
+
+[node name="EquipPortrait3" type="TextureRect" parent="HBox/VBoxContainer2/HBoxContainer4"]
+custom_minimum_size = Vector2(27, 28)
+layout_mode = 2
+expand_mode = 2
+
+[node name="Winrate4" type="Label" parent="HBox/VBoxContainer2/HBoxContainer4"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_w8cjl")
+theme_override_font_sizes/font_size = 15
+text = "Win Rate 47.02%"
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="HBox/VBoxContainer2"]
+layout_mode = 2
+
+[node name="EquipPortrait1" type="TextureRect" parent="HBox/VBoxContainer2/HBoxContainer5"]
+custom_minimum_size = Vector2(27, 28)
+layout_mode = 2
+expand_mode = 2
+
+[node name="EquipPortrait2" type="TextureRect" parent="HBox/VBoxContainer2/HBoxContainer5"]
+custom_minimum_size = Vector2(27, 28)
+layout_mode = 2
+expand_mode = 2
+
+[node name="EquipPortrait3" type="TextureRect" parent="HBox/VBoxContainer2/HBoxContainer5"]
+custom_minimum_size = Vector2(27, 28)
+layout_mode = 2
+expand_mode = 2
+
+[node name="Winrate5" type="Label" parent="HBox/VBoxContainer2/HBoxContainer5"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_w8cjl")
+theme_override_font_sizes/font_size = 15
+text = "Win Rate 47.02%"

@@ -1,0 +1,72 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdv83jc6ixre2"]
+
+[ext_resource type="Script" path="res://scripts/SettingPage/PerformanceSetting/PerformanceSetting.gd" id="1_kptai"]
+[ext_resource type="FontFile" uid="uid://dxul5lyctep67" path="res://fonts/Poppins-Bold.ttf" id="1_xakgk"]
+[ext_resource type="Script" path="res://scripts/SettingPage/PerformanceSetting/LabelTooltip.gd" id="3_6q0yp"]
+
+[node name="PerformanceSetting" type="Window"]
+gui_embed_subwindows = true
+title = "Performance Setting"
+initial_position = 4
+size = Vector2i(900, 700)
+script = ExtResource("1_kptai")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.137255, 0.137255, 0.137255, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_xakgk")
+theme_override_font_sizes/font_size = 30
+text = "Performance Setting"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="ColorRect/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="Label" type="Label" parent="ColorRect/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+tooltip_text = "This setting sets how many threads OpenCV should use for detection. -1 for use max threads. Consider decreasing if the program lags too much."
+mouse_filter = 1
+text = "Set OpenCV Num Threads"
+script = ExtResource("3_6q0yp")
+
+[node name="SpinBox" type="SpinBox" parent="ColorRect/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+min_value = -1.0
+value = -1.0
+rounded = true
+
+[node name="Button" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Set"
+
+[node name="OpenCVSetLabel" type="Label" parent="ColorRect/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "Num Threads Set!"
+horizontal_alignment = 1
+
+[connection signal="close_requested" from="." to="." method="_on_close_requested"]
+[connection signal="pressed" from="ColorRect/VBoxContainer/HBoxContainer/Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://ct8cegaorokge"]
+
+[ext_resource type="Script" path="res://scripts/Misc/Portrait/MultiPortraitController.gd" id="1_1j003"]
+[ext_resource type="PackedScene" uid="uid://dt154ln4shap2" path="res://scenes/Misc/Portrait/PortraitDisplay.tscn" id="2_suakv"]
+
+[node name="Control" type="HBoxContainer"]
+offset_right = 62.0
+offset_bottom = 62.0
+script = ExtResource("1_1j003")
+
+[node name="Portrait1" parent="." instance=ExtResource("2_suakv")]
+custom_minimum_size = Vector2(62, 62)
+layout_mode = 2
+
+[node name="Portrait2" parent="." instance=ExtResource("2_suakv")]
+custom_minimum_size = Vector2(62, 62)
+layout_mode = 2
+
+[node name="Portrait3" parent="." instance=ExtResource("2_suakv")]
+custom_minimum_size = Vector2(62, 62)
+layout_mode = 2
+
+[node name="Portrait4" parent="." instance=ExtResource("2_suakv")]
+custom_minimum_size = Vector2(62, 62)
+layout_mode = 2
+
+[node name="Portrait5" parent="." instance=ExtResource("2_suakv")]
+custom_minimum_size = Vector2(62, 62)
+layout_mode = 2

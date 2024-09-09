@@ -1,0 +1,224 @@
+[gd_scene load_steps=27 format=3 uid="uid://b4jgu08424yah"]
+
+[ext_resource type="Shader" path="res://shaders/blur.gdshader" id="1_8lvu5"]
+[ext_resource type="FontFile" uid="uid://dxul5lyctep67" path="res://fonts/Poppins-Bold.ttf" id="2_lrkd2"]
+[ext_resource type="Texture2D" uid="uid://np8mshh3fieg" path="res://UI/Misc/LoadCircle.png" id="3_iml7q"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4gs4w"]
+shader = ExtResource("1_8lvu5")
+shader_parameter/blur_amount = -1.369
+shader_parameter/mix_amount = 0.601
+shader_parameter/color_over = null
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cmkmm"]
+bg_color = Color(0.137255, 0.137255, 0.137255, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tvfpx"]
+atlas = ExtResource("3_iml7q")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_si8ja"]
+atlas = ExtResource("3_iml7q")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l6f5a"]
+atlas = ExtResource("3_iml7q")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_itt6w"]
+atlas = ExtResource("3_iml7q")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2wrlc"]
+atlas = ExtResource("3_iml7q")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gq5uh"]
+atlas = ExtResource("3_iml7q")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xg3a3"]
+atlas = ExtResource("3_iml7q")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dmaql"]
+atlas = ExtResource("3_iml7q")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ioe2"]
+atlas = ExtResource("3_iml7q")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jmpg2"]
+atlas = ExtResource("3_iml7q")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lx0kf"]
+atlas = ExtResource("3_iml7q")
+region = Rect2(640, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ades4"]
+atlas = ExtResource("3_iml7q")
+region = Rect2(704, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_euly5"]
+atlas = ExtResource("3_iml7q")
+region = Rect2(768, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j0nrj"]
+atlas = ExtResource("3_iml7q")
+region = Rect2(832, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_77eyi"]
+atlas = ExtResource("3_iml7q")
+region = Rect2(896, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cgf6x"]
+atlas = ExtResource("3_iml7q")
+region = Rect2(960, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i8q0g"]
+atlas = ExtResource("3_iml7q")
+region = Rect2(1024, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bsrf2"]
+atlas = ExtResource("3_iml7q")
+region = Rect2(1088, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8kiom"]
+atlas = ExtResource("3_iml7q")
+region = Rect2(1152, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c748t"]
+atlas = ExtResource("3_iml7q")
+region = Rect2(1216, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_admas"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tvfpx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_si8ja")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l6f5a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_itt6w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2wrlc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gq5uh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xg3a3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dmaql")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ioe2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jmpg2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lx0kf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ades4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_euly5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j0nrj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_77eyi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cgf6x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i8q0g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bsrf2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8kiom")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c748t")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[node name="PauseScreen" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_4gs4w")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_right = 200
+
+[node name="Panel" type="Panel" parent="ColorRect/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(50, 200)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_cmkmm")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/VBoxContainer/MarginContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="ColorRect/VBoxContainer/MarginContainer/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_lrkd2")
+theme_override_font_sizes/font_size = 31
+text = "Paused
+press 'esc'"
+horizontal_alignment = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ColorRect/VBoxContainer/MarginContainer/Panel/VBoxContainer"]
+position = Vector2(246, 144)
+sprite_frames = SubResource("SpriteFrames_admas")
+autoplay = "default"

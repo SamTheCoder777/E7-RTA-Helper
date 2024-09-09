@@ -1,0 +1,51 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Epic 7 RTA Draft Helper"
+run/main_scene="res://scenes/FrontPage/FrontPage.tscn"
+config/features=PackedStringArray("4.2", "Forward Plus")
+config/icon="res://icon.png"
+config/windows_native_icon="res://icon.ico"
+
+[autoload]
+
+GlobalVars="*res://scripts/Global/GlobalVars.gd"
+SettingManager="*res://scripts/Global/SettingManager.gd"
+
+[display]
+
+window/size/viewport_width=900
+window/size/viewport_height=1200
+window/subwindows/embed_subwindows=false
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep_width"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/csv-data-importer/plugin.cfg")
+
+[filesystem]
+
+import/blender/enabled=false
+
+[gui]
+
+timers/tooltip_delay_sec=0.2
+
+[importer_defaults]
+
+com.timothyqiu.godot-csv-importer={
+"delimiter": 0,
+"detect_numbers": true,
+"force_float": true,
+"headers": true
+}

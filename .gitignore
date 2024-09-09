@@ -1,0 +1,17 @@
+# Godot 4+ specific ignores
+.godot/
+**/__pycache__
+*.tmp
+.DS_Store
+.venv
+temp_cropped.png
+temp_cropped.png.import
+temp.png
+temp.png.import
+screenshot.jpg
+screenshot.jpg.import
+config.cfg
+server.log
+
+python/
+python_mac/

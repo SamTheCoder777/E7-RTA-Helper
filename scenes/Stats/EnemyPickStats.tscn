@@ -1,0 +1,98 @@
+[gd_scene load_steps=5 format=3 uid="uid://cv8gfcsq78tc6"]
+
+[ext_resource type="Script" path="res://scripts/Stats/EnemyPickStats.gd" id="1_31ch4"]
+[ext_resource type="FontFile" uid="uid://dxul5lyctep67" path="res://fonts/Poppins-Bold.ttf" id="2_x0idm"]
+[ext_resource type="PackedScene" uid="uid://dt154ln4shap2" path="res://scenes/Misc/Portrait/PortraitDisplay.tscn" id="3_ltkh8"]
+[ext_resource type="PackedScene" uid="uid://bw8wy7tv0dfkq" path="res://scenes/Stats/EquipmentSetsData.tscn" id="4_tgiix"]
+
+[node name="EnemyPickStats" type="Control"]
+layout_mode = 3
+anchor_right = 0.433
+anchor_bottom = 0.375
+offset_right = 0.299975
+offset_bottom = -3.57628e-05
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_31ch4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 37
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x0idm")
+theme_override_font_sizes/font_size = 15
+text = "E7 All Servers Match History Data"
+horizontal_alignment = 1
+
+[node name="E7Stat" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.105
+anchor_top = 0.401
+anchor_right = 0.831
+anchor_bottom = 0.592
+offset_left = -40.95
+offset_top = 37.05
+offset_right = 65.91
+offset_bottom = 0.0999966
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_x0idm")
+theme_override_font_sizes/font_size = 15
+text = "Win Rate NaN%
+# NaN"
+horizontal_alignment = 1
+
+[node name="PickedChar" parent="." instance=ExtResource("3_ltkh8")]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 1
+anchor_left = 0.049
+anchor_top = 0.049
+anchor_right = 0.433
+anchor_bottom = 0.382
+offset_left = -0.110001
+offset_top = -0.0500011
+offset_right = 0.129989
+offset_bottom = 0.0999869
+
+[node name="PickedStat" type="Label" parent="."]
+layout_mode = 2
+anchor_left = 0.482
+anchor_top = 0.127
+anchor_right = 0.887
+anchor_bottom = 0.258
+offset_left = 0.019991
+offset_top = -0.150002
+offset_right = -17.93
+offset_bottom = -0.100007
+theme_override_fonts/font = ExtResource("2_x0idm")
+theme_override_font_sizes/font_size = 20
+text = "Picked NaN%
+Win Rate NaN%"
+
+[node name="EquipmentSetsData" parent="." instance=ExtResource("4_tgiix")]
+layout_mode = 1
+anchor_left = 0.035
+anchor_top = 0.605
+anchor_right = 0.728
+anchor_bottom = 0.957
+offset_left = 11.35
+offset_top = 9.74999
+offset_right = -120.48
+offset_bottom = -83.15
+
+[connection signal="char_picked" from="." to="." method="_on_char_picked"]
+
+[editable path="EquipmentSetsData"]

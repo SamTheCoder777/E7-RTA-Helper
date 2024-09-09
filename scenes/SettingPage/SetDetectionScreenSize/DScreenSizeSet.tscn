@@ -1,0 +1,171 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3wvkjs2se0m6"]
+
+[ext_resource type="FontFile" uid="uid://dxul5lyctep67" path="res://fonts/Poppins-Bold.ttf" id="1_hwbe6"]
+[ext_resource type="Script" path="res://scripts/SettingPage/SetDetectionScreenSize/DScreenSizeSet.gd" id="1_jdqdc"]
+[ext_resource type="Texture2D" uid="uid://bmy6lm2o1yauq" path="res://UI/Setting/WindowSettingGuide.png" id="3_ud8n6"]
+
+[node name="DScreenSizeSet" type="Window"]
+title = "Set Screen"
+initial_position = 4
+size = Vector2i(900, 700)
+script = ExtResource("1_jdqdc")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.137255, 0.137255, 0.137255, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 15
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect/MarginContainer"]
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 40
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 39
+
+[node name="CropTop" type="Label" parent="ColorRect/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Crop Top (Percent)"
+
+[node name="CropTopValue" type="SpinBox" parent="ColorRect/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+min_value = 1.0
+value = 1.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ColorRect/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="CropBot" type="Label" parent="ColorRect/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Crop Bottom (Percent)"
+
+[node name="CropBotValue" type="SpinBox" parent="ColorRect/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+min_value = 1.0
+value = 1.0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ColorRect/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="CropRight" type="Label" parent="ColorRect/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+text = "Crop Right (Percent)"
+
+[node name="CropRightValue" type="SpinBox" parent="ColorRect/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+min_value = 1.0
+value = 1.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ColorRect/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 19
+
+[node name="CropLeft" type="Label" parent="ColorRect/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer2"]
+layout_mode = 2
+text = "Crop Left (Percent)"
+
+[node name="CropLeftValue" type="SpinBox" parent="ColorRect/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer2"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+min_value = 1.0
+value = 1.0
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="ColorRect/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="CropCenter" type="Label" parent="ColorRect/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer3/HBoxContainer"]
+layout_mode = 2
+text = "Crop Center (Percent)"
+
+[node name="CropCenterValue" type="SpinBox" parent="ColorRect/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer3/HBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+step = 0.01
+
+[node name="WindowSelector" type="OptionButton" parent="ColorRect/MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+item_count = 1
+selected = 0
+fit_to_longest_item = false
+popup/item_0/text = "Select Window"
+popup/item_0/id = 0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ColorRect/MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 23
+alignment = 1
+
+[node name="ScreenShotButton" type="Button" parent="ColorRect/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(70, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_hwbe6")
+text = "Screenshot"
+
+[node name="SetButton" type="Button" parent="ColorRect/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(70, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_hwbe6")
+text = "Set"
+
+[node name="ResetButton" type="Button" parent="ColorRect/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.729412, 0, 0, 1)
+text = "Reset"
+
+[node name="MessageLabel" type="Label" parent="ColorRect/MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_hwbe6")
+horizontal_alignment = 1
+
+[node name="Preview" type="TextureRect" parent="ColorRect/MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+texture = ExtResource("3_ud8n6")
+expand_mode = 2
+stretch_mode = 4
+
+[connection signal="close_requested" from="." to="." method="_on_close_requested"]
+[connection signal="pressed" from="ColorRect/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer2/ScreenShotButton" to="." method="_on_screen_shot_button_pressed"]
+[connection signal="pressed" from="ColorRect/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer2/SetButton" to="." method="_on_set_button_pressed"]
+[connection signal="pressed" from="ColorRect/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer2/ResetButton" to="." method="_on_reset_button_pressed"]

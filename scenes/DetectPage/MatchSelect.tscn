@@ -1,0 +1,211 @@
+[gd_scene load_steps=10 format=3 uid="uid://daslk60gfw8pp"]
+
+[ext_resource type="Texture2D" uid="uid://ct2chcs0fbwm" path="res://UI/Misc/ArrowBack.png" id="1_5v1v6"]
+[ext_resource type="FontFile" uid="uid://dxul5lyctep67" path="res://fonts/Poppins-Bold.ttf" id="1_vrgd2"]
+[ext_resource type="Texture2D" uid="uid://blvcp7haa3uf3" path="res://UI/MatchSelect/UserDataSection.png" id="2_xum47"]
+[ext_resource type="Texture2D" uid="uid://bp802gd5dwcu7" path="res://UI/MatchSelect/RealTimeEnemyDetectionSection.png" id="3_2uxct"]
+[ext_resource type="PackedScene" uid="uid://ct8cegaorokge" path="res://scenes/Misc/Portrait/MultiPortraitDisplay.tscn" id="5_ecajm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ccu4r"]
+bg_color = Color(0.72549, 0, 0, 1)
+expand_margin_top = 1.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o50tj"]
+bg_color = Color(0, 0.65098, 0, 1)
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_idti5"]
+texture = ExtResource("2_xum47")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_127mi"]
+texture = ExtResource("3_2uxct")
+
+[node name="MatchSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Container" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="Container"]
+layout_mode = 2
+color = Color(0.137255, 0.137255, 0.137255, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Container/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Container/ColorRect/VBoxContainer"]
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="Container/ColorRect/VBoxContainer/HBoxContainer"]
+top_level = true
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+icon = ExtResource("1_5v1v6")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="CenterContainer" type="CenterContainer" parent="Container/ColorRect/VBoxContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Container/ColorRect/VBoxContainer/CenterContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_vrgd2")
+theme_override_font_sizes/font_size = 32
+text = "RTA Draft Helper"
+horizontal_alignment = 1
+
+[node name="WinPredictionBar" type="ProgressBar" parent="Container/ColorRect"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.04
+anchor_top = 0.446167
+anchor_right = 0.968
+anchor_bottom = 0.465
+offset_left = 0.499902
+offset_top = -0.400448
+offset_right = 0.299951
+offset_bottom = -0.000101089
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_ccu4r")
+theme_override_styles/fill = SubResource("StyleBoxFlat_o50tj")
+value = 50.0
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="Container/ColorRect"]
+layout_mode = 2
+anchor_top = 0.083
+anchor_right = 1.0
+anchor_bottom = 0.439
+offset_top = 0.399995
+offset_bottom = 1.19999
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_right = 30
+
+[node name="UserDataSection" type="Panel" parent="Container/ColorRect/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_idti5")
+
+[node name="Label" type="Label" parent="Container/ColorRect/MarginContainer/UserDataSection"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.109
+anchor_right = 0.278
+anchor_bottom = 0.056
+offset_left = -0.015004
+offset_top = 1.0
+offset_right = -0.130022
+offset_bottom = 0.0879993
+theme_override_fonts/font = ExtResource("1_vrgd2")
+theme_override_font_sizes/font_size = 16
+text = "Your Most Picked"
+
+[node name="Label2" type="Label" parent="Container/ColorRect/MarginContainer/UserDataSection"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.582
+anchor_right = 0.751
+anchor_bottom = 0.056
+offset_left = 0.0299857
+offset_top = 1.0
+offset_right = -0.085039
+offset_bottom = 0.0879993
+theme_override_fonts/font = ExtResource("1_vrgd2")
+theme_override_font_sizes/font_size = 16
+text = "Recent 10 Games"
+
+[node name="MarginContainer2" type="MarginContainer" parent="Container/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.004
+anchor_top = 0.475
+anchor_right = 1.0
+anchor_bottom = 0.967
+offset_left = 0.4
+offset_top = -2.86102e-05
+offset_right = 4.0
+offset_bottom = -0.400081
+grow_horizontal = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_right = 30
+
+[node name="RealTimeEnemyDetection" type="Panel" parent="Container/ColorRect/MarginContainer2"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_127mi")
+
+[node name="Label" type="Label" parent="Container/ColorRect/MarginContainer2/RealTimeEnemyDetection"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.095
+anchor_right = 0.307
+anchor_bottom = 0.041
+offset_left = 0.199995
+offset_top = 1.0
+offset_right = 0.119991
+offset_bottom = -0.190003
+theme_override_fonts/font = ExtResource("1_vrgd2")
+theme_override_font_sizes/font_size = 16
+text = "Recommended Picks"
+
+[node name="Label2" type="Label" parent="Container/ColorRect/MarginContainer2/RealTimeEnemyDetection"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.601
+anchor_right = 0.775
+anchor_bottom = 0.041
+offset_left = 0.159991
+offset_top = 1.0
+offset_right = -3.00407e-05
+offset_bottom = -0.189997
+theme_override_fonts/font = ExtResource("1_vrgd2")
+theme_override_font_sizes/font_size = 16
+text = "Enemy Picks"
+
+[node name="EnemyPortraits" parent="Container/ColorRect/MarginContainer2/RealTimeEnemyDetection" instance=ExtResource("5_ecajm")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.551
+anchor_top = 0.058
+anchor_right = 0.866
+anchor_bottom = 0.142
+offset_left = 0.160001
+offset_top = -0.220001
+offset_right = 66.505
+offset_bottom = 12.22
+scale = Vector2(0.8, 0.8)
+
+[node name="UserPortraits" parent="Container/ColorRect/MarginContainer2/RealTimeEnemyDetection" instance=ExtResource("5_ecajm")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.06
+anchor_top = 0.058
+anchor_right = 0.375
+anchor_bottom = 0.142
+offset_left = -0.400002
+offset_top = -0.220001
+offset_right = 66.0
+offset_bottom = 12.22
+scale = Vector2(0.8, 0.8)

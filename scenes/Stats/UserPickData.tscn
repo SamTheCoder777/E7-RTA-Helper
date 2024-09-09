@@ -1,0 +1,348 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfdo7e51htoq2"]
+
+[ext_resource type="PackedScene" uid="uid://dt154ln4shap2" path="res://scenes/Misc/Portrait/PortraitDisplay.tscn" id="1_lpqix"]
+[ext_resource type="Script" path="res://scripts/Stats/UserPickData.gd" id="1_xubgh"]
+[ext_resource type="FontFile" uid="uid://dxul5lyctep67" path="res://fonts/Poppins-Bold.ttf" id="2_fnbjh"]
+
+[node name="UserPickData" type="Control"]
+layout_mode = 3
+anchor_left = -0.013
+anchor_top = -0.042
+anchor_right = 0.448
+anchor_bottom = 0.428
+offset_left = 11.7
+offset_top = 50.4
+offset_right = -13.2
+offset_bottom = -63.6
+script = ExtResource("1_xubgh")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.133
+anchor_right = 1.026
+anchor_bottom = 1.133
+offset_top = 8.85
+offset_right = -10.14
+offset_bottom = -8.85001
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 13
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_right = -2
+
+[node name="Rank" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fnbjh")
+theme_override_font_sizes/font_size = 22
+text = "#1"
+
+[node name="PortraitDisplay" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer" instance=ExtResource("1_lpqix")]
+custom_minimum_size = Vector2(32, 64)
+layout_mode = 2
+expand_mode = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fnbjh")
+theme_override_font_sizes/font_size = 15
+text = "WR NaN%"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_constants/margin_right = -6
+
+[node name="Rank" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2/MarginContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fnbjh")
+theme_override_font_sizes/font_size = 22
+text = "#2"
+
+[node name="PortraitDisplay" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2" instance=ExtResource("1_lpqix")]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+expand_mode = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fnbjh")
+theme_override_font_sizes/font_size = 15
+text = "WR NaN%"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+theme_override_constants/margin_right = -6
+
+[node name="Rank" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer3/MarginContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fnbjh")
+theme_override_font_sizes/font_size = 22
+text = "#3"
+
+[node name="PortraitDisplay" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer3" instance=ExtResource("1_lpqix")]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+expand_mode = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fnbjh")
+theme_override_font_sizes/font_size = 15
+text = "WR NaN%"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+theme_override_constants/margin_right = -6
+
+[node name="Rank" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer4/MarginContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fnbjh")
+theme_override_font_sizes/font_size = 22
+text = "#4"
+
+[node name="PortraitDisplay" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer4" instance=ExtResource("1_lpqix")]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+expand_mode = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fnbjh")
+theme_override_font_sizes/font_size = 15
+text = "WR NaN%"
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+theme_override_constants/margin_right = -6
+
+[node name="Rank" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer5/MarginContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fnbjh")
+theme_override_font_sizes/font_size = 22
+text = "#5"
+
+[node name="PortraitDisplay" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer5" instance=ExtResource("1_lpqix")]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+expand_mode = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fnbjh")
+theme_override_font_sizes/font_size = 15
+text = "WR NaN%"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_right = -6
+
+[node name="Rank" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fnbjh")
+theme_override_font_sizes/font_size = 22
+text = "#6"
+
+[node name="PortraitDisplay" parent="VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer" instance=ExtResource("1_lpqix")]
+custom_minimum_size = Vector2(32, 64)
+layout_mode = 2
+expand_mode = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fnbjh")
+theme_override_font_sizes/font_size = 15
+text = "WR NaN%"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer2"]
+layout_mode = 2
+theme_override_constants/margin_right = -6
+
+[node name="Rank" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer2/MarginContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fnbjh")
+theme_override_font_sizes/font_size = 22
+text = "#7"
+
+[node name="PortraitDisplay" parent="VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer2" instance=ExtResource("1_lpqix")]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+expand_mode = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fnbjh")
+theme_override_font_sizes/font_size = 15
+text = "WR NaN%"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer3"]
+layout_mode = 2
+theme_override_constants/margin_right = -6
+
+[node name="Rank" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer3/MarginContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fnbjh")
+theme_override_font_sizes/font_size = 22
+text = "#8"
+
+[node name="PortraitDisplay" parent="VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer3" instance=ExtResource("1_lpqix")]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+expand_mode = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer3"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fnbjh")
+theme_override_font_sizes/font_size = 15
+text = "WR NaN%"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer4"]
+layout_mode = 2
+theme_override_constants/margin_right = -6
+
+[node name="Rank" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer4/MarginContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fnbjh")
+theme_override_font_sizes/font_size = 22
+text = "#9"
+
+[node name="PortraitDisplay" parent="VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer4" instance=ExtResource("1_lpqix")]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+expand_mode = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer4"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fnbjh")
+theme_override_font_sizes/font_size = 15
+text = "WR NaN%"
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer5"]
+layout_mode = 2
+theme_override_constants/margin_right = -10
+
+[node name="Rank" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer5/MarginContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fnbjh")
+theme_override_font_sizes/font_size = 19
+text = "#10"
+
+[node name="PortraitDisplay" parent="VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer5" instance=ExtResource("1_lpqix")]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+expand_mode = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer5"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fnbjh")
+theme_override_font_sizes/font_size = 15
+text = "WR NaN%"
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fnbjh")
+theme_override_font_sizes/font_size = 15
+text = "E7 All Servers Match History Data"
+horizontal_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fnbjh")
+text = "Enemy Counter"
+horizontal_alignment = 1
+
+[node name="Counters" type="HBoxContainer" parent="VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+alignment = 1
+
+[node name="PortraitDisplay" parent="VBoxContainer/VBoxContainer2/Counters" instance=ExtResource("1_lpqix")]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="PortraitDisplay2" parent="VBoxContainer/VBoxContainer2/Counters" instance=ExtResource("1_lpqix")]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="PortraitDisplay3" parent="VBoxContainer/VBoxContainer2/Counters" instance=ExtResource("1_lpqix")]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fnbjh")
+text = "Team Synergies"
+horizontal_alignment = 1
+
+[node name="Synergies" type="HBoxContainer" parent="VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+alignment = 1
+
+[node name="PortraitDisplay" parent="VBoxContainer/VBoxContainer2/Synergies" instance=ExtResource("1_lpqix")]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="PortraitDisplay2" parent="VBoxContainer/VBoxContainer2/Synergies" instance=ExtResource("1_lpqix")]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="PortraitDisplay3" parent="VBoxContainer/VBoxContainer2/Synergies" instance=ExtResource("1_lpqix")]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[connection signal="show_counters" from="." to="." method="on_show_counters"]
+[connection signal="show_recommendation" from="." to="." method="on_show_recommendation"]
+[connection signal="show_synergies" from="." to="." method="on_show_synergies"]

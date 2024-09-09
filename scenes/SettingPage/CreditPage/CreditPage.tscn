@@ -1,0 +1,133 @@
+[gd_scene load_steps=3 format=3 uid="uid://ifsnljqrtciq"]
+
+[ext_resource type="FontFile" uid="uid://dxul5lyctep67" path="res://fonts/Poppins-Bold.ttf" id="1_8lv07"]
+[ext_resource type="Script" path="res://scripts/SettingPage/CreditPage/CreditPage.gd" id="1_etdhh"]
+
+[node name="CreditPage" type="Window"]
+title = "Credits"
+initial_position = 4
+size = Vector2i(900, 700)
+script = ExtResource("1_etdhh")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.137255, 0.137255, 0.137255, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HSeparator" type="HSeparator" parent="ColorRect/ScrollContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+theme_override_constants/separation = 65
+
+[node name="CeciliaBot" type="VBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="ColorRect/ScrollContainer/VBoxContainer/CeciliaBot"]
+layout_mode = 2
+
+[node name="Label" type="LinkButton" parent="ColorRect/ScrollContainer/VBoxContainer/CeciliaBot/CenterContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_8lv07")
+theme_override_font_sizes/font_size = 42
+text = "Cecilia Bot"
+underline = 1
+uri = "https://ceciliabot.github.io/#/"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/ScrollContainer/VBoxContainer/CeciliaBot"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+bbcode_enabled = true
+text = "[center]All hero informations such as skill descriptions, 
+or buff descriptions are from Cecilia Bot[/center]"
+
+[node name="HSeparator2" type="HSeparator" parent="ColorRect/ScrollContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="E7" type="VBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="ColorRect/ScrollContainer/VBoxContainer/E7"]
+layout_mode = 2
+
+[node name="Label" type="LinkButton" parent="ColorRect/ScrollContainer/VBoxContainer/E7/CenterContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_8lv07")
+theme_override_font_sizes/font_size = 42
+text = "Epic 7 Match History"
+underline = 1
+uri = "https://epic7.gg.onstove.com/en"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/ScrollContainer/VBoxContainer/E7"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+bbcode_enabled = true
+text = "[center]Hero's win rate/pick rates, match data, and set stats
+ are from the epic 7's official match history website
+[/center]"
+
+[node name="HSeparator3" type="HSeparator" parent="ColorRect/ScrollContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="CeciliaBot2" type="VBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="ColorRect/ScrollContainer/VBoxContainer/CeciliaBot2"]
+layout_mode = 2
+
+[node name="Label" type="LinkButton" parent="ColorRect/ScrollContainer/VBoxContainer/CeciliaBot2/CenterContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_8lv07")
+theme_override_font_sizes/font_size = 42
+text = "Godot Engine"
+underline = 1
+uri = "https://godotengine.org/"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/ScrollContainer/VBoxContainer/CeciliaBot2"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 10
+bbcode_enabled = true
+text = "[center]This game uses Godot Engine, available under the following license:
+
+Copyright (c) 2014-present Godot Engine contributors.
+Copyright (c) 2007-2014 Juan Linietsky, Ariel Manzur.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the \"Software\"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.[/center]"
+fit_content = true
+
+[connection signal="close_requested" from="." to="." method="_on_close_requested"]

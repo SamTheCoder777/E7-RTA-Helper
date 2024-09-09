@@ -1,0 +1,91 @@
+[gd_scene load_steps=8 format=3 uid="uid://cycodxssifw11"]
+
+[ext_resource type="Script" path="res://scripts/SettingPage/SettingPage.gd" id="1_oe8bk"]
+[ext_resource type="FontFile" uid="uid://dxul5lyctep67" path="res://fonts/Poppins-Bold.ttf" id="1_wjp57"]
+[ext_resource type="Texture2D" uid="uid://cmv0rxidef2gm" path="res://UI/Setting/SetDetectionScreenSizeBtn.png" id="3_0ooxf"]
+[ext_resource type="Texture2D" uid="uid://d1mfcinxk8m18" path="res://UI/Setting/SetUserButton.png" id="4_rpmqe"]
+[ext_resource type="Texture2D" uid="uid://o0th73ynfm75" path="res://UI/Setting/PerformanceSettingBtn.png" id="5_hcnb4"]
+[ext_resource type="Texture2D" uid="uid://dww4pua5bpo56" path="res://UI/Setting/CheckUpdatesButton.png" id="6_c7b1o"]
+[ext_resource type="Texture2D" uid="uid://bhg3866fqhs62" path="res://UI/Setting/CreditsButton.png" id="6_unie6"]
+
+[node name="SettingPage" type="Window"]
+title = "Settings"
+initial_position = 4
+size = Vector2i(900, 500)
+script = ExtResource("1_oe8bk")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.137255, 0.137255, 0.137255, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 17
+
+[node name="Name" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_wjp57")
+theme_override_font_sizes/font_size = 35
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+text_overrun_behavior = 2
+
+[node name="SetDScreenSize" type="Button" parent="ColorRect/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_wjp57")
+icon = ExtResource("3_0ooxf")
+flat = true
+
+[node name="SetUserData" type="Button" parent="ColorRect/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+icon = ExtResource("4_rpmqe")
+flat = true
+
+[node name="PerformanceSetting" type="Button" parent="ColorRect/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+icon = ExtResource("5_hcnb4")
+flat = true
+
+[node name="CheckUpdates" type="Button" parent="ColorRect/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+icon = ExtResource("6_c7b1o")
+flat = true
+
+[node name="UpdatesStatus" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "Checking for updates..."
+horizontal_alignment = 1
+
+[node name="Credits" type="Button" parent="ColorRect/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+icon = ExtResource("6_unie6")
+flat = true
+
+[connection signal="close_requested" from="." to="." method="_on_close_requested"]
+[connection signal="pressed" from="ColorRect/ScrollContainer/VBoxContainer/SetDScreenSize" to="." method="_on_set_d_screen_size_pressed"]
+[connection signal="pressed" from="ColorRect/ScrollContainer/VBoxContainer/SetUserData" to="." method="_on_set_user_data_pressed"]
+[connection signal="pressed" from="ColorRect/ScrollContainer/VBoxContainer/PerformanceSetting" to="." method="_on_performance_setting_pressed"]
+[connection signal="pressed" from="ColorRect/ScrollContainer/VBoxContainer/CheckUpdates" to="." method="_on_check_updates_pressed"]
+[connection signal="pressed" from="ColorRect/ScrollContainer/VBoxContainer/Credits" to="." method="_on_credits_pressed"]

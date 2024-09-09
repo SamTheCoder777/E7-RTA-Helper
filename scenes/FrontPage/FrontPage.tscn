@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dopij1ufuswnv"]
+
+[ext_resource type="Script" path="res://scripts/FrontPage/FrontPage.gd" id="1_nhqrq"]
+[ext_resource type="PackedScene" uid="uid://demt2i8v1jh2x" path="res://scenes/FrontPage/FrontPageContents.tscn" id="2_80po0"]
+[ext_resource type="PackedScene" uid="uid://bpqlenhg4kjqw" path="res://scenes/Misc/LoadingScreen.tscn" id="3_ae827"]
+
+[node name="FrontPage" type="Node2D"]
+script = ExtResource("1_nhqrq")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="FrontPageContents" parent="CanvasLayer" instance=ExtResource("2_80po0")]
+
+[node name="LoadingScreen" parent="CanvasLayer" instance=ExtResource("3_ae827")]
+
+[connection signal="pressed" from="CanvasLayer/FrontPageContents/ColorRect/VBoxContainer2/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/FrontPageContents/ColorRect/VBoxContainer2/StartButton" to="." method="_on_start_button_pressed"]
+
+[editable path="CanvasLayer/FrontPageContents"]
