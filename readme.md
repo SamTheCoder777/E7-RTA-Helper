@@ -52,7 +52,9 @@
 ![overview](doc/program_overview.png)
 
 I created this tool because ~~I am really bad at this game~~ even though this game is competitive, there are very limited tools/guides compared to other competitive games such as league of legends, Valorant, Dota2, etc. This tool uses SIFT algorithm to detect characters on your game screen and then uses pretrained model to predict which character would fit the best in the current draft scenario.  You can also get information on characters quickly by clicking on their portraits.
- > Note: The program relies solely on publicly available information, such as the RTA game screen and Epic 7 match history, to make recommendations. It does not have information on who your opponent is, who the user is or any other game or user specific data.
+
+ > [!NOTE]
+ > The program relies solely on publicly available information, such as the RTA game screen and Epic 7 match history, to make recommendations. It does not have information on who your opponent is, who the user is or any other game or user specific data.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -92,21 +94,27 @@ Follow these steps to get started
 
  1. Download the latest release from [releases](https://github.com/SamTheCoder777/E7-RTA-Helper/releases)
 
-> Note .7z is much faster but you may need to install 7zip separately
+> [!NOTE] 
+> .7z is much faster but you may need to install 7zip separately
 
 2. Extract the files
 
 **Windows:**
 
 1. run `init_windows.bat`
-> The process may hang when installing python packages. This is normal behavior. Please wait until it finishes.
+
+> [!NOTE]
+> The process may hang when installing python packages. This is normal behaviour. Please wait until it finishes.
 
 **Mac**
 
-1. run `init_mac.sh` from the terminal
+1. Open terminal on the downloaded folder
+2. `chmod +x init_mac.sh`
+3. `chmod +x python_mac/install/bin/python3.11`
+4. `./init_mach.sh`
 
-> ./init_mac.sh
-> > The process may hang when installing python packages. This is normal behavior. Please wait until it finishes.
+> [!NOTE]
+> The process may hang when installing python packages. This is normal behaviour. Please wait until it finishes.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -116,8 +124,9 @@ Follow these steps to get started
 
 You will need to play a game of RTA to set up the program
 
- 1. Launch `E7RTAHelper.exe`
+ 1. Launch `E7RTAHelper.exe` or `E7RTAHelper` depending on your OS
 
+> [!IMPORTANT]
 > If you are using BlueStacks of other emulators, you may need to launch E7RTAHelper as admin
 > otherwise the program will not be able to detect your game
 
@@ -135,6 +144,12 @@ You will need to play a game of RTA to set up the program
 
 **Your window should look like this after**
 ![final screen](doc/screen_size_2.png)
+
+Now you are ready! 
+Press `Start Detection` on the front page to get started
+
+> [!TIP]
+> Press `esc` when you are done drafting to turn the tool to idle mode and prevent lag
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
