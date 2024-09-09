@@ -130,7 +130,7 @@ You will need to play a game of RTA to set up the program
  6. After ban phase, click `screenshot`
  7. First Adjust Crop top, right, bottom and left settings then press **set** so it captures like below
 ![screen size 1](doc/screen_size_after_1.png)
-8. Then set the crop center settings so it removes the red box shown below
+8. Then set the crop center settings so it removes the center
 ![screen size 2](doc/screen_size_after_2.png)
 
 **Your window should look like this after**
