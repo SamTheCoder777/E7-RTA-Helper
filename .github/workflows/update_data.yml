@@ -2,6 +2,8 @@ name: Update Data
 
 on:
   workflow_dispatch:
+  repository_dispatch:
+    types: [run_update_data]
 
 jobs:
   run_script:
