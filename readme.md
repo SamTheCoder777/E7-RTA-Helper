@@ -8,7 +8,7 @@
   <p align="center">
     This tool uses image recognition to detect the game screen and employs a pre-trained model to recommend the best characters for the current RTA (Real Time Arena) draft
     <br />
-    <a href="https://github.com/SamTheCoder777/E7-RTA-Helper#getting-started">Fast Start</a>
+    <a href="https://github.com/SamTheCoder777/E7-RTA-Helper#getting-started">Quick Start</a>
     ·
     <a href="https://github.com/SamTheCoder777/E7-RTA-Helper/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
