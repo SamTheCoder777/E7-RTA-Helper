@@ -23,8 +23,7 @@ driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install())
 initial_url = 'https://epic7.gg.onstove.com/en/rank/hero'
 driver.get(initial_url)
 
-# Optionally, wait for the page to fully load
-WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.TAG_NAME, 'body')))
+WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, 'div.filterlist-wrap ul li')))
 
 # Create the 'dataset' directory if it doesn't exist
 os.makedirs('dataset', exist_ok=True)
