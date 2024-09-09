@@ -150,7 +150,7 @@ Press `Start Detection` on the front page to get started
 and make sure to set `First Pick` from the drop down menu
 
 > [!TIP]
-> Press `esc` when you are done drafting to turn the tool to idle mode and prevent lag
+> Press `Esc` after drafting to switch the tool to idle mode and reduce lag
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
