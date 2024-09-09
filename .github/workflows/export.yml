@@ -55,6 +55,8 @@ jobs:
           rm -r godot_export_templates
           rm Godot_v4.2.2-stable_linux.x86_64.zip
           rm Godot_v4.2.2-stable_export_templates.tpz
+          rm -r python_mac/
+          rm init_mac.sh
 
       # Change executable icon
       - name: Change icon
@@ -118,6 +120,8 @@ jobs:
           rm -r godot_export_templates
           rm Godot_v4.2.2-stable_linux.x86_64.zip
           rm Godot_v4.2.2-stable_export_templates.tpz
+          rm -r python/
+          rm init_windows.bat
 
       # Install 7zip
       - name: Install 7zip
