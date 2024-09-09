@@ -88,7 +88,7 @@ def SIFT_feature_matching(target_gray, descriptors_target, keypoints_target, cha
 			if m.distance < 0.5 * n.distance:
 				good_matches.append(m)
 
-		min_good_matches = 5
+		min_good_matches = 4
 		if len(good_matches) < min_good_matches:
 			good_matches.clear()
 			flipped = True
