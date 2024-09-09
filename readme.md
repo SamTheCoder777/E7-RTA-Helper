@@ -111,7 +111,7 @@ Follow these steps to get started
 1. Open terminal on the downloaded folder
 2. `chmod +x init_mac.sh`
 3. `chmod +x python_mac/install/bin/python3.11`
-4. `./init_mach.sh`
+4. `./init_mac.sh`
 
 > [!NOTE]
 > The process may hang when installing python packages. This is normal behaviour. Please wait until it finishes.
