@@ -70,8 +70,8 @@ jobs:
       # Create a ZIP file containing the entire project
       - name: Create ZIP/TAR package of the entire project
         run: |
-          zip -r ../E7RTAHelper.zip ./*
-          7z a ../E7RTAHelper.7z ./*
+          zip -r ../E7RTAHelper_win.zip ./*
+          7z a ../E7RTAHelper_win.7z ./*
 
       # Create a release on GitHub with the ZIP file
       - name: Create release
@@ -79,5 +79,60 @@ jobs:
         with:
           generateReleaseNotes: true
           tag: ${{ github.ref_name }}
-          artifacts: "../E7RTAHelper.zip,../E7RTAHelper.7z"
+          artifacts: "../E7RTAHelper_win.zip,../E7RTAHelper_win.7z"
           allowUpdates: true
+          
+  export_mac_game:
+    runs-on: ubuntu-latest
+    permissions: write-all
+    name: Export Mac Game
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+          
+      # Download Godot executable for headless operation
+      - name: Download Godot executable
+        run: |
+          wget https://downloads.tuxfamily.org/godotengine/4.2.2/Godot_v4.2.2-stable_linux.x86_64.zip
+          unzip Godot_v4.2.2-stable_linux.x86_64.zip -d godot_headless
+
+      # Download the Godot export templates
+      - name: Download Godot export templates
+        run: |
+          wget https://downloads.tuxfamily.org/godotengine/4.2.2/Godot_v4.2.2-stable_export_templates.tpz
+          mkdir -p ~/.local/share/godot/export_templates/4.2.2.stable/
+          mkdir -p godot_export_templates
+          unzip Godot_v4.2.2-stable_export_templates.tpz -d godot_export_templates
+          cp godot_export_templates/templates/* ~/.local/share/godot/export_templates/4.2.2.stable/
+
+      # Run Godot headless to generate the .godot file for windows
+      - name: Generate .godot cache file
+        run: |
+          ./godot_headless/Godot_v4.2.2-stable_linux.x86_64 --path . --headless --export-release "macOS" "E7RTAHelper.app"
+
+      # Remove godot headless
+      - name: Remove godot
+        run: |
+          rm -r godot_headless
+          rm -r godot_export_templates
+          rm Godot_v4.2.2-stable_linux.x86_64.zip
+          rm Godot_v4.2.2-stable_export_templates.tpz
+
+      # Install 7zip
+      - name: Install 7zip
+        run: |
+          sudo apt install p7zip-full p7zip-rar
+          
+      # Create a ZIP file containing the entire project
+      - name: Create ZIP/TAR package of the entire project
+        run: |
+          zip -r ../E7RTAHelper_mac.zip ./*
+          7z a ../E7RTAHelper_mac.7z ./*
+
+      # Create a release on GitHub with the ZIP file
+      - name: Create release
+        uses: ncipollo/release-action@v1.14.0
+        with:
+          generateReleaseNotes: true
+          tag: ${{ github.ref_name }}
