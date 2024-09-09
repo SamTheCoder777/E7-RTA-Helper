@@ -136,3 +136,5 @@ jobs:
         with:
           generateReleaseNotes: true
           tag: ${{ github.ref_name }}
+          artifacts: "../E7RTAHelper_mac.zip,../E7RTAHelper_mac.7z"
+          allowUpdates: true
