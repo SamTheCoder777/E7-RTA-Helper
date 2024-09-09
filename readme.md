@@ -49,7 +49,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![enter image description here](addurl)
+![overview](doc/program_overview.png)
 
 I created this tool because ~~I am really bad at this game~~ even though this game is competitive, there are very limited tools/guides compared to other competitive games such as league of legends, Valorant, Dota2, etc. This tool uses SIFT algorithm to detect characters on your game screen and then uses pretrained model to predict which character would fit the best in the current draft scenario.  You can also get information on characters quickly by clicking on their portraits.
  > Note: The program relies solely on publicly available information, such as the RTA game screen and Epic 7 match history, to make recommendations. It does not have information on who your opponent is, who the user is or any other game or user specific data.
@@ -128,13 +128,13 @@ You will need to play a game of RTA to set up the program
  4. Open Epic 7 and select the game tab title from `Select Window`
  5. Then go into a RTA match
  6. After ban phase, click `screenshot`
- 7. First Adjust Crop top, right, bottom and left settings then press **set** so it captures only inside the red box shown below
-![enter image description here](addurl)
+ 7. First Adjust Crop top, right, bottom and left settings then press **set** so it captures like below
+![screen size 1](doc/screen_size_after_1.png)
 8. Then set the crop center settings so it removes the red box shown below
-![enter image description here](addurl)
+![screen size 2](doc/screen_size_after_2.png)
 
-**Final image should look like this**
-![enter image description here](addurl)
+**Your window should look like this after**
+![final screen](doc/screen_size_2.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -143,18 +143,20 @@ You will need to play a game of RTA to set up the program
  - **Display user statistics**
 	 - You can set your account on `Set User Data` in the settings
 	 - Your stats will now display on detection screen
-	 - ![enter image description here](addurl)
+	 - ![User Data](doc/user_stats.png)
 	 
 - **Detect your game screen and display data**
 	- Recommend top 10 characters that fits into your draft
-	- ![enter image description here](addurl)
+	- ![Recommend page](doc/rec_page.png)
 	- Predict your win rate with your current drafts
-	- ![enter image description here](addurl)
+  - ![Predict winrates](doc/user_win_percentage.png)
+  - Quickly get information about your enemy's pick
+	- ![Enemy pick stats](doc/enemy_pick_stats.png)
     - Pause detection by pressing `esc`
 	
 - **Get character information by clicking on character portrait**
 	- Information is available thanks to [Ceciliabot](https://ceciliabot.github.io/#/)
-	- ![enter image description here](addurl)
+	- ![Character description](doc/CharDesc.png)
 
 
 <!-- ROADMAP -->

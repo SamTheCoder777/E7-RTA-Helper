@@ -47,6 +47,7 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("1_buj2p")
 theme_override_font_sizes/font_size = 22
 text = "Need help or have suggestions?"
+uri = "https://github.com/SamTheCoder777/E7-RTA-Helper/issues"
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="ColorRect"]
 layout_mode = 1
