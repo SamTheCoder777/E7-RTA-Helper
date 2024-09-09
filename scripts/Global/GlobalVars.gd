@@ -45,23 +45,26 @@ var status_connected_num = 0
 func read_csv(path: String):
 	var rows = []
 	var file = FileAccess.open(path, FileAccess.READ)
-	while file and !file.eof_reached():
-		var csv_rows = file.get_csv_line(",")
-		rows.append(csv_rows)
-	file.close()
-	rows.pop_back() #remove last empty array get_csv_line() has created 
-	var headers = Array(rows[0])
-	
-	rows.pop_front() # remove header
-	var csv_array = []
-	for row in rows:
-		var csv = {}
+	if file:
+		while !file.eof_reached():
+			var csv_rows = file.get_csv_line(",")
+			rows.append(csv_rows)
+		file.close()
+		rows.pop_back() #remove last empty array get_csv_line() has created 
+		var headers = Array(rows[0])
 		
-		for header_id in headers.size():
-			#print(row)
-			csv[headers[header_id]] = row[header_id]
-		csv_array.append(csv)
-	return csv_array
+		rows.pop_front() # remove header
+		var csv_array = []
+		for row in rows:
+			var csv = {}
+			
+			for header_id in headers.size():
+				#print(row)
+				csv[headers[header_id]] = row[header_id]
+			csv_array.append(csv)
+		return csv_array
+	else:
+		return []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -78,15 +81,15 @@ func _ready():
 			python_script_path = "server_mac.py"
 	
 	# Load all csvs
-	hero_match_data = read_csv("res://data/epic7_hero_stats.csv")
-	hero_data = read_csv("res://data/hero_official_stats.csv")
-	hero_names = read_csv("res://data/hero_code_to_name.csv")
+	hero_match_data = read_csv("data/epic7_hero_stats.csv")
+	hero_data = read_csv("data/hero_official_stats.csv")
+	hero_names = read_csv("data/hero_code_to_name.csv")
 	for hero in hero_data:
 		if hero['Hero'] == 'c6062':
 			print(hero)
 	
-	hero_details = read_csv('res://data/hero_details.csv')
-	buffs_debuffs_details = read_csv('res://data/buffs_debuffs_details.csv')
+	hero_details = read_csv('data/hero_details.csv')
+	buffs_debuffs_details = read_csv('data/buffs_debuffs_details.csv')
 	# Now initialize the HTTPRequest node to communicate with the server
 	http_request = HTTPRequest.new()
 	add_child(http_request)
