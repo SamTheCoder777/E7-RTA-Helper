@@ -127,7 +127,7 @@ You will need to play a game of RTA to set up the program
  1. Launch `E7RTAHelper.exe` or `E7RTAHelper` depending on your OS
 
 > [!IMPORTANT]
-> If you are using BlueStacks of other emulators, you may need to launch E7RTAHelper as admin
+> If you are using BlueStacks or other emulators, you may need to launch E7RTAHelper as admin
 > otherwise the program will not be able to detect your game
 
 >On Mac, you may need to give permissions such as recording your screen on the security & privacy settings
