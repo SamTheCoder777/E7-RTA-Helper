@@ -138,10 +138,10 @@ You will need to play a game of RTA to set up the program
 
  2. Click `init/settings`
  3. Click `Set Detection Screen Size`
- 4. Open Epic 7 and select the game tab title from `Select Window`
- 5. Then go into a RTA match
- 6. After ban phase, click `screenshot`
- 7. Select your game window title from the `Select Window` dropdown
+ 4. Open Epic 7
+ 5. Select your game window title from the `Select Window` dropdown
+ 6. Then go into a RTA match
+ 7. After ban phase, click `screenshot`
  8. First Adjust Crop top, right, bottom and left settings then press **set** so it captures like below
 
 ![screen size 1](doc/screen_size_after_1.png)
