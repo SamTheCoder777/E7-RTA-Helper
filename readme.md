@@ -86,11 +86,15 @@ Follow these steps to get started
 
 ### Prerequisites
 
-**Supported OS**: **Windows** and **Mac OS M series**
+**Supported OS**: **Windows** and ~~**Mac OS M series**~~
+
+> [!CAUTION]
+> Mac OS Version is currently not supported due to weird crashes and security issues
+> However there are plans in the future for it
 
 ### Installation
 
-**Windows & Mac M series:** 
+**Windows & ~~Mac M series:~~** 
 
  1. Download the latest release from [releases](https://github.com/SamTheCoder777/E7-RTA-Helper/releases)
 
@@ -106,15 +110,15 @@ Follow these steps to get started
 > [!NOTE]
 > The process may hang when installing python packages. This is normal behaviour. Please wait until it finishes.
 
-**Mac**
+~~**Mac**~~
 
-1. Open terminal on the downloaded folder
-2. `chmod +x init_mac.sh`
-3. `chmod +x python_mac/install/bin/python3.11`
-4. `./init_mac.sh`
+~~1. Open terminal on the downloaded folder~~
+~~2. `chmod +x init_mac.sh`~~
+~~3. `chmod +x python_mac/install/bin/python3.11`~~
+~~4. `./init_mac.sh`~~
 
-> [!NOTE]
-> The process may hang when installing python packages. This is normal behaviour. Please wait until it finishes.
+~~> [!NOTE]~~
+~~> The process may hang when installing python packages. This is normal behaviour. Please wait until it finishes.~~
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -159,20 +163,20 @@ and make sure to set `First Pick` from the drop down menu
  - **Display user statistics**
 	 - You can set your account on `Set User Data` in the settings
 	 - Your stats will now display on detection screen
-	 - ![User Data](doc/user_stats.png)
+![User Data](doc/user_stats.png)
 	 
 - **Detect your game screen and display data**
 	- Recommend top 10 characters that fits into your draft
-	- ![Recommend page](doc/rec_page.png)
+![Recommend page](doc/rec_page.png)
 	- Predict your win rate with your current drafts
   - ![Predict winrates](doc/user_win_percentage.png)
   - Quickly get information about your enemy's pick
-	- ![Enemy pick stats](doc/enemy_pick_stats.png)
+![Enemy pick stats](doc/enemy_pick_stats.png)
     - Pause detection by pressing `esc`
 	
 - **Get character information by clicking on character portrait**
 	- Information is available thanks to [Ceciliabot](https://ceciliabot.github.io/#/)
-	- ![Character description](doc/CharDesc.png)
+![Character description](doc/CharDesc.png)
 
 
 <!-- ROADMAP -->
@@ -202,10 +206,11 @@ Don't forget to give the project a star! Thanks again!
 1. Download Godot version 4.2.2
 2. Fork the Project
 3. Clone and open the project on Godot
-4. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-5. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-6. Push to the Branch (`git push origin feature/AmazingFeature`)
-7. Open a Pull Request
+4. Make changes
+5. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+6. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+7. Push to the Branch (`git push origin feature/AmazingFeature`)
+8. Open a Pull Request
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
