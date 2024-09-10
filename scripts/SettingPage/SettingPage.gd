@@ -39,6 +39,10 @@ func _on_credits_pressed():
 
 func _on_check_updates_pressed():
 	if misc_http_request.get_http_client_status() == 0 and !update_checked:
+		update_checked = true
+		$ColorRect/ScrollContainer/VBoxContainer/UpdatesStatus.visible = true
+		$ColorRect/ScrollContainer/VBoxContainer/UpdatesStatus.text = "Checking for updates..."
+		
 		misc_http_request.request("http://127.0.0.1:"+str(GlobalVars.misc_port)+"/check_update")
 	
 func _on_misc_server_completed(result, response_code, headers, body):
@@ -59,6 +63,9 @@ func _on_misc_server_completed(result, response_code, headers, body):
 			if text != '':
 				text+="\n"
 			text += 'Program update detected. Please download it on github'
+		if !response['data_updated'] and !response['program_updated']:
+			$ColorRect/ScrollContainer/VBoxContainer/UpdatesStatus.visible = true
+			text += 'You are up to date!'
 			
 		$ColorRect/ScrollContainer/VBoxContainer/UpdatesStatus.text = text
 		
