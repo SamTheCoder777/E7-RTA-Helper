@@ -51,7 +51,7 @@ func _on_misc_server_completed(result, response_code, headers, body):
 		var json = JSON.new()
 		json.parse(body.get_string_from_utf8())
 		var response = json.get_data()
-		
+		print(str(response))
 		var text = ''
 		if response['data_updated'] == true:
 			$ColorRect/ScrollContainer/VBoxContainer/UpdatesStatus.visible = true

@@ -134,7 +134,8 @@ def check_update():
             print(f"{current_data_version} is up to date")
 
         if current_program_version_obj < server_program_version_obj:
-            is_data_updated = True
+            print(f"New program version: {server_program_version}is found. Updating...")
+            is_program_updated = True
         
         return jsonify({"data_updated": is_data_updated, "program_updated": is_program_updated}), 200
     
