@@ -30,6 +30,7 @@ import fsspec
 from pathlib import Path
 from packaging.version import Version
 import json
+import requests
 
 # Function to send keys with a delay
 def send_keys_slowly(element, text, delay=0.1):
@@ -43,7 +44,7 @@ app = Flask(__name__)
 logging.basicConfig(filename='server.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def fetch_json_from_github():
-    url = f"https://raw.githubusercontent.com/SamTheCoder777/E7-RTA-Helperr/main/versions.json"
+    url = f"https://raw.githubusercontent.com/SamTheCoder777/E7-RTA-Helper/main/versions.json"
     response = requests.get(url)
     
     if response.status_code == 200:
