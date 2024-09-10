@@ -41,7 +41,7 @@ func _on_check_updates_pressed():
 	if misc_http_request.get_http_client_status() == 0 and !update_checked:
 		update_checked = true
 		$ColorRect/ScrollContainer/VBoxContainer/UpdatesStatus.visible = true
-		$ColorRect/ScrollContainer/VBoxContainer/UpdatesStatus.text = "Checking for updates..."
+		$ColorRect/ScrollContainer/VBoxContainer/UpdatesStatus.text = "Checking for updates... Please wait...\nThis could take some time..."
 		
 		misc_http_request.request("http://127.0.0.1:"+str(GlobalVars.misc_port)+"/check_update")
 	

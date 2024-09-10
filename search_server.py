@@ -26,12 +26,14 @@ from attention import Attention
 import ast
 
 # For updating
-import fsspec
-from pathlib import Path
 from packaging.version import Version
 import json
 import requests
-
+import git
+import shutil
+import os
+import stat
+from os import path
 # Function to send keys with a delay
 def send_keys_slowly(element, text, delay=0.1):
     for char in text:
@@ -53,23 +55,43 @@ def fetch_json_from_github():
     else:
         raise Exception(f"Failed to fetch file from GitHub. Status code: {response.status_code}")
     
-def recursive_copy(src_dir, dst_dir):
-    # Initialize the GitHub filesystem
-    fs = fsspec.filesystem("github", org="SamTheCoder777", repo="E7-RTA-Helper")
-    # List the contents of the source directory
-    for item in fs.ls(src_dir, detail=True):
-        item_path = item["name"]
-        if item["type"] == "file":
-            # It's a file, copy it to the destination
-            destination_file = Path(dst_dir) / Path(item_path).name
-            fs.get(item_path, destination_file.as_posix())
-            print(f"Copied file: {item_path} -> {destination_file}")
-        elif item["type"] == "directory":
-            # It's a directory, create it in the destination and copy its contents recursively
-            destination_subdir = Path(dst_dir) / Path(item_path).name
-            destination_subdir.mkdir(exist_ok=True, parents=True)
-            print(f"Entering directory: {item_path}")
-            recursive_copy(item_path, destination_subdir)
+def update():
+    repo_url = 'https://github.com/SamTheCoder777/E7-RTA-Helper.git' 
+    clone_dir = './repo'
+    folders_to_move = ['CharacterUI', 'dataset', 'data']
+    destination = './'
+
+    if os.path.exists(clone_dir):
+        for root, dirs, files in os.walk(clone_dir):  
+            for dir in dirs:
+                os.chmod(path.join(root, dir), stat.S_IRWXU)
+            for file in files:
+                os.chmod(path.join(root, file), stat.S_IRWXU)
+        shutil.rmtree(clone_dir)
+
+    repo = git.Repo.clone_from(repo_url, clone_dir)
+
+    for folder in folders_to_move:
+        # Full path of the folder to move
+        folder_path = os.path.join(clone_dir, folder)
+
+        # Destination path where the folder will be moved
+        dest_path = os.path.join(destination, folder)
+
+        # Remove destination folder if it exists (overwrite)
+        if os.path.exists(dest_path):
+            shutil.rmtree(dest_path)
+
+        # Move the folder to the destination
+        shutil.move(folder_path, destination)
+    
+    # Delete the repo
+    for root, dirs, files in os.walk(clone_dir):  
+            for dir in dirs:
+                os.chmod(path.join(root, dir), stat.S_IRWXU)
+            for file in files:
+                os.chmod(path.join(root, file), stat.S_IRWXU)
+    shutil.rmtree(clone_dir)
 
 
 @app.route('/check_update', methods=['GET'])
@@ -101,11 +123,7 @@ def check_update():
         if current_data_version_obj < server_data_version_obj:
             print(f"New version: {server_data_version}is found. Updating...")
             
-            recursive_copy("data", "./data")
-
-            recursive_copy("dataset", "./dataset")
-
-            recursive_copy("CharacterUI", "./CharacterUI")
+            update()
 
             data['data_version'] = server_data_version
             with open('versions.json', 'w') as f:
