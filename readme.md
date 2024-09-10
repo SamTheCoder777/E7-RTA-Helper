@@ -89,7 +89,7 @@ Follow these steps to get started
 **Supported OS**: **Windows** and ~~**Mac OS M series**~~
 
 > [!CAUTION]
-> Mac OS Version is currently not supported due to weird crashes and security issues
+> Mac OS Version is currently not supported due to weird crashes and security issues.
 > However there are plans in the future for it
 
 ### Installation
@@ -141,12 +141,18 @@ You will need to play a game of RTA to set up the program
  4. Open Epic 7 and select the game tab title from `Select Window`
  5. Then go into a RTA match
  6. After ban phase, click `screenshot`
- 7. First Adjust Crop top, right, bottom and left settings then press **set** so it captures like below
+ 7. Select your game window title from the `Select Window` dropdown
+ 8. First Adjust Crop top, right, bottom and left settings then press **set** so it captures like below
+
 ![screen size 1](doc/screen_size_after_1.png)
-8. Then set the crop center settings so it removes the center
+
+
+ 8. Then set the crop center settings so it removes the center
+
 ![screen size 2](doc/screen_size_after_2.png)
 
 **Your window should look like this after**
+
 ![final screen](doc/screen_size_2.png)
 
 Now you are ready! 
@@ -163,15 +169,20 @@ and make sure to set `First Pick` from the drop down menu
  - **Display user statistics**
 	 - You can set your account on `Set User Data` in the settings
 	 - Your stats will now display on detection screen
-![User Data](doc/user_stats.png)
-	 
+
+- ![User Data](doc/user_stats.png)
+
+
+
 - **Detect your game screen and display data**
 	- Recommend top 10 characters that fits into your draft
-![Recommend page](doc/rec_page.png)
+- ![Recommend page](doc/rec_page.png)
+
 	- Predict your win rate with your current drafts
-  - ![Predict winrates](doc/user_win_percentage.png)
+- ![Predict winrates](doc/user_win_percentage.png)
+  
   - Quickly get information about your enemy's pick
-![Enemy pick stats](doc/enemy_pick_stats.png)
+- ![Enemy pick stats](doc/enemy_pick_stats.png)
     - Pause detection by pressing `esc`
 	
 - **Get character information by clicking on character portrait**
