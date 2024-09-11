@@ -36,6 +36,7 @@
       </ul>
     </li>
     <li><a href="#initial-setup">Initial Setup</a></li>
+    <li><a href="#troubleshooting">Troubleshooting</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -162,6 +163,13 @@ and make sure to set `First Pick` from the drop down menu
 > [!TIP]
 > Press `Esc` after drafting to switch the tool to idle mode and reduce lag
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Troubleshooting
+
+- **It uses too much cpu/resources**
+	- The image recognition algorithm is set to use all the available resources by default. Consider lowering `OpenCV Number of Threads` to `1` or lower number instead of `-1` in the `performance settings`
+   
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Features
