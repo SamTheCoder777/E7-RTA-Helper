@@ -202,7 +202,8 @@ def search():
             search_input = driver.find_element(By.CLASS_NAME, "search-input")
             search_input.send_keys(Keys.CONTROL + "a")
             search_input.send_keys(Keys.DELETE)
-            send_keys_slowly(search_input, player_name, delay=0.05)
+            send_keys_slowly(search_input, player_name, delay=0.2)
+            time.sleep(2)
             search_input.send_keys(Keys.ENTER)
 
             # Check if there is no data

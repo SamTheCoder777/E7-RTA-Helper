@@ -121,7 +121,7 @@ func _ready():
 	#http_request.request(url)
 
 func get_user_data(name, server):
-	misc_http_request.request("http://127.0.0.1:"+str(misc_port)+"/search?name="+str(name)+"&server="+str(server))
+	misc_http_request.request("http://127.0.0.1:"+str(misc_port)+"/search?name="+str(name).uri_encode()+"&server="+str(server))
 	await misc_http_request.request_completed
 	return user_data
 	
