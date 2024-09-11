@@ -71,7 +71,7 @@ func find_file(directory_path: String, search_term: String) -> Dictionary:
 					var file_words = file_without_ext.split(" ")
 					
 					# Check for exact phrase match
-					if search_term in file_without_ext:
+					if search_term == file_without_ext:
 						exact_phrase_match_found = true
 						best_match = {"file_path": directory_path.path_join(file), "file_without_ext": file_without_ext}
 						break  # Since an exact phrase match is found, exit the loop
@@ -263,7 +263,7 @@ func set_content(char_code) -> void:
 											multi_DBuff_Portrait.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 											multi_DBuff_Portrait.custom_minimum_size = Vector2(40,40)
 											var image_texture = Image.load_from_file(DBuff_image_path['file_path'])
-											var texture_portrait = ImageTexture.create_from_image(image)
+											var texture_portrait = ImageTexture.create_from_image(image_texture)
 											texture_portrait.resource_path = DBuff_image_path['file_path']	
 											
 											multi_DBuff_Portrait.texture = texture_portrait
@@ -276,8 +276,10 @@ func set_content(char_code) -> void:
 													multi_DBuff_Portrait.tooltip_text += "\n"+single_buff['Description']
 													break
 											
-											print('eh')
 											dbuff_portrait_containers[skill_index].add_child(multi_DBuff_Portrait)
+											
+											print('db rand debuff: '+DBuff_image_path['file_without_ext'])
+											print('db rand debuff: '+DBuff_image_path['file_path'])
 									break
 													
 			else:
@@ -297,13 +299,12 @@ func set_content(char_code) -> void:
 						
 						for record in GlobalVars.buffs_debuffs_details:
 							if record['Name'].to_lower() == DBuff_image_path['file_without_ext'].to_lower():
-								var heroes = JSON.parse_string(record['Heroes'].replace("'","\"").strip_edges())
-								if char_code in heroes:
-									DBuff_Portrait.tooltip_text += "\n"+record['Description']
+								DBuff_Portrait.tooltip_text += "\n"+record['Description']
 									
-									dbuff_portrait_containers[skill_index].add_child(DBuff_Portrait)
-									break
+								dbuff_portrait_containers[skill_index].add_child(DBuff_Portrait)
+								break
 						print('db debuff: '+DBuff_image_path['file_without_ext'])
+						print('db debuff: '+DBuff_image_path['file_path'])						
 						
 			
 		# Find Buffs
@@ -319,7 +320,7 @@ func set_content(char_code) -> void:
 			DBuff_Portrait.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 			DBuff_Portrait.custom_minimum_size = Vector2(40,40)
 			
-			print('db: '+ buffs[buff_index].get_string(1))
+			print('db regex: '+ buffs[buff_index].get_string(1))
 			# Check if the buff is "Random Buff" or "Random Buffs"
 			if buffs[buff_index].get_string(1).to_lower() == "random buff" or buffs[buff_index].get_string(1).to_lower() == "random buffs":
 				for record in GlobalVars.buffs_debuffs_details:
@@ -353,7 +354,6 @@ func set_content(char_code) -> void:
 													multi_DBuff_Portrait.tooltip_text += "\n"+single_buff['Description']
 													break
 											
-											print('eh')
 											dbuff_portrait_containers[skill_index].add_child(multi_DBuff_Portrait)
 									break
 
@@ -374,13 +374,10 @@ func set_content(char_code) -> void:
 						
 						for record in GlobalVars.buffs_debuffs_details:
 							if record['Name'].to_lower() == DBuff_image_path['file_without_ext'].to_lower():
-								var heroes = JSON.parse_string(record['Heroes'].replace("'","\"").strip_edges())
-								if char_code in heroes:
-									print('db')
-									DBuff_Portrait.tooltip_text += "\n"+record['Description']
+								DBuff_Portrait.tooltip_text += "\n"+record['Description']
 								
-									dbuff_portrait_containers[skill_index].add_child(DBuff_Portrait)
-									break
+								dbuff_portrait_containers[skill_index].add_child(DBuff_Portrait)
+								break
 						print('db: '+DBuff_image_path['file_path'])
 				
 	
