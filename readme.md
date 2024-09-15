@@ -96,13 +96,14 @@ Follow these steps to get started
 ### Installation
 
 **Windows & ~~Mac M series:~~** 
-
- 1. Download the latest release from [releases](https://github.com/SamTheCoder777/E7-RTA-Helper/releases)
+ 1. Download Git from [here](https://git-scm.com/download/win)
+ 2. Make sure to have Git in path (It should do this if you download it with recommended settings)
+ 3. Download the latest release from [releases](https://github.com/SamTheCoder777/E7-RTA-Helper/releases)
 
 > [!NOTE] 
 > .7z is much faster but you may need to install 7zip separately
 
-2. Extract the files
+4. Extract the files
 
 **Windows:**
 
