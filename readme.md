@@ -262,5 +262,6 @@ For now, please open up an issue if you are having problem
 ## Acknowledgments
 
 * [Ceciliabot](https://ceciliabot.github.io/#/) for letting me use their amazing website for character descriptions
+* This tool is a fan made tool and we are not affiliated with SmileGate or EpicSeven in any way.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
