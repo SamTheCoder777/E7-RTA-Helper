@@ -28,6 +28,7 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
+    <li><a href="#features">Features</a></li>
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
@@ -37,7 +38,6 @@
     </li>
     <li><a href="#initial-setup">Initial Setup</a></li>
     <li><a href="#troubleshooting">Troubleshooting</a></li>
-    <li><a href="#features">Features</a></li>
     <li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
@@ -80,6 +80,33 @@ Data from:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+## Features
+
+ - **Display user statistics**
+	 - You can set your account on `Set User Data` in the settings
+	 - Your stats will now display on detection screen
+
+- ![User Data](doc/user_stats.png)
+
+
+
+- **Detect your game screen and display data**
+	- Recommend top 10 characters that fits into your draft
+- ![Recommend page](doc/rec_page.png)
+
+	- Predict your win rate with your current drafts
+- ![Predict winrates](doc/user_win_percentage.png)
+  
+  - Quickly get information about your enemy's pick
+- ![Enemy pick stats](doc/enemy_pick_stats.png)
+    - Pause detection by pressing `esc`
+	
+- **Get character information by clicking on character portrait**
+	- Information is available thanks to [Ceciliabot](https://ceciliabot.github.io/#/)
+![Character description](doc/CharDesc.png)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- GETTING STARTED -->
@@ -180,32 +207,6 @@ and make sure to set `First Pick` from the drop down menu
    
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-## Features
-
- - **Display user statistics**
-	 - You can set your account on `Set User Data` in the settings
-	 - Your stats will now display on detection screen
-
-- ![User Data](doc/user_stats.png)
-
-
-
-- **Detect your game screen and display data**
-	- Recommend top 10 characters that fits into your draft
-- ![Recommend page](doc/rec_page.png)
-
-	- Predict your win rate with your current drafts
-- ![Predict winrates](doc/user_win_percentage.png)
-  
-  - Quickly get information about your enemy's pick
-- ![Enemy pick stats](doc/enemy_pick_stats.png)
-    - Pause detection by pressing `esc`
-	
-- **Get character information by clicking on character portrait**
-	- Information is available thanks to [Ceciliabot](https://ceciliabot.github.io/#/)
-![Character description](doc/CharDesc.png)
-
 ## Frequently Asked Questions
 
 - **How do I update?**
@@ -215,6 +216,7 @@ and make sure to set `First Pick` from the drop down menu
   		- You can keep your current settings by moving your `config.cfg` file to the newly downloaded folder
     		- You may need to update the recommender model by clicking `Check for Updates` in the settings
     	
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ROADMAP -->
 ## Roadmap
