@@ -156,6 +156,9 @@ You will need to play a game of RTA to set up the program
 
 ![final screen](doc/screen_size_2.png)
 
+ 9. **Lastly make sure you update recommender to the latest version**:
+Click `Check for Updates` in the settings. Make sure to **Restart** the tool after updating!
+
 Now you are ready! 
 Press `Start Detection` on the front page to get started
 and make sure to set `First Pick` from the drop down menu
