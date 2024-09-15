@@ -124,7 +124,6 @@ Follow these steps to get started
 
 ### Installation
 
-**Windows & ~~Mac M series:~~** 
  1. Download Git from [here](https://git-scm.com/download/win)
  2. Make sure to have Git in path (It should do this if you download it with recommended settings)
  3. Download the latest release from [releases](https://github.com/SamTheCoder777/E7-RTA-Helper/releases)
@@ -134,22 +133,10 @@ Follow these steps to get started
 
 4. Extract the files
 
-**Windows:**
-
-1. run `init_windows.bat`
+5. run `init_windows.bat`
 
 > [!NOTE]
 > The process may hang when installing python packages. This is normal behaviour. Please wait until it finishes.
-
-~~**Mac**~~
-
-~~1. Open terminal on the downloaded folder~~
-~~2. `chmod +x init_mac.sh`~~
-~~3. `chmod +x python_mac/install/bin/python3.11`~~
-~~4. `./init_mac.sh`~~
-
-~~> [!NOTE]~~
-~~> The process may hang when installing python packages. This is normal behaviour. Please wait until it finishes.~~
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -159,7 +146,7 @@ Follow these steps to get started
 
 You will need to play a game of RTA to set up the program
 
- 1. Launch `E7RTAHelper.exe` or `E7RTAHelper` depending on your OS
+ 1. Launch `E7RTAHelper.exe`
 
 > [!IMPORTANT]
 > If you are using BlueStacks or other emulators, you may need to launch E7RTAHelper as admin
