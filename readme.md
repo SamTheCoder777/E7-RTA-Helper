@@ -37,6 +37,8 @@
     </li>
     <li><a href="#initial-setup">Initial Setup</a></li>
     <li><a href="#troubleshooting">Troubleshooting</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -173,8 +175,11 @@ and make sure to set `First Pick` from the drop down menu
 
 - **It uses too much cpu/resources**
 	- The image recognition algorithm is set to use all the available resources by default. Consider lowering `OpenCV Number of Threads` to `1` or lower number instead of `-1` in the `performance settings`
+ - **It is stuck at `Server Connected (1/2)`**
+ 	- Make sure to have Git installed and on PATH (It should have been installed on PATH if you just downloaded git with default settings)
    
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ## Features
 
@@ -201,6 +206,15 @@ and make sure to set `First Pick` from the drop down menu
 	- Information is available thanks to [Ceciliabot](https://ceciliabot.github.io/#/)
 ![Character description](doc/CharDesc.png)
 
+## Frequently Asked Questions
+
+- **How do I update?**
+	- You can update the **recommender model** by clicking `Check for Updates` in the settings
+ 		- Make sure to **Restart** your tool after the update!
+ 	- For the update on the **Software** itself, you would need to download the new release on the github [releases](https://github.com/SamTheCoder777/E7-RTA-Helper/releases)
+  		- You can keep your current settings by moving your `config.cfg` file to the newly downloaded folder
+    		- You may need to update the recommender model by clicking `Check for Updates` in the settings
+    	
 
 <!-- ROADMAP -->
 ## Roadmap
