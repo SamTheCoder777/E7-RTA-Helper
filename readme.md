@@ -125,7 +125,7 @@ Follow these steps to get started
 ### Installation
 
  1. Download Git from [here](https://git-scm.com/download/win)
- 2. Make sure to have Git in path (It should do this if you download it with recommended settings)
+ 2. Make sure to have Git in path (Installer should have done this if you downloaded it with recommended settings and with the `Setup` and not `Portable`)
  3. Download the latest release from [releases](https://github.com/SamTheCoder777/E7-RTA-Helper/releases)
 
 > [!NOTE] 
