@@ -217,7 +217,7 @@ and make sure to set `First Pick` from the drop down menu
 - [ ] Meta tracker
 - [ ] Profile review page
 - [ ] Auto update user stats
-- [ ] Update algorithm for Synergy/Countery characters
+- [ ] Update algorithm for Synergy/Counter characters
 - [ ] Preban and Postban
 
 See the [open issues](https://github.com/SamTheCoder777/E7-RTA-Helper/issues) for a full list of proposed features (and known issues).
