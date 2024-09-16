@@ -188,9 +188,9 @@ and make sure to set `First Pick` from the drop down menu
 ## Troubleshooting
 
 - **It uses too much cpu/resources**
-	- The image recognition algorithm is set to use all the available resources by default. Consider lowering `OpenCV Number of Threads` to `1` or lower number instead of `-1` in the `performance settings`
+	- The image recognition algorithm is set to use all the available resources by default. Consider lowering `OpenCV Number of Threads` to `1` or lower number instead of `-1` in the `performance settings`<br />
  - **It is stuck at `Server Connected (1/2)`**
- 	- Make sure to have Git installed and on PATH (It should have been installed on PATH if you just downloaded git with default settings)
+ 	- Make sure to have Git installed and on PATH (It should have been installed on PATH if you just downloaded git with default settings)<br />
    
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -201,7 +201,10 @@ and make sure to set `First Pick` from the drop down menu
  		- Make sure to **Restart** your tool after the update!
  	- For the update on the **Software** itself, you would need to download the new release on the github [releases](https://github.com/SamTheCoder777/E7-RTA-Helper/releases)
   		- You can keep your current settings by moving your `config.cfg` file to the newly downloaded folder
-    		- You may need to update the recommender model by clicking `Check for Updates` in the settings
+    		- You may need to update the recommender model by clicking `Check for Updates` in the settings<br />
+      
+- **How frequently does the model and hero descriptions update?**
+	- Currently the model and the hero descriptions update weekly <br />
     	
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
