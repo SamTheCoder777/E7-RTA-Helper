@@ -3,7 +3,7 @@ name: Validate Data
 on:
   workflow_dispatch:
   workflow_run:
-    workflows: ["Train Model"]
+    workflows: ["Update Data"]
     types:
       - completed
 
@@ -25,6 +25,10 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r workflow_scripts/requirements.txt
+
+      - name: "Merge csvs"
+        run: |
+          python workflow_scripts/csv_merger.py
 
       - name: "Start Validation"
         run: |
