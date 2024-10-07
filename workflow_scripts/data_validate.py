@@ -1,5 +1,7 @@
 import pandas as pd
 import logging
+import json
+from packaging.version import Version
 logging.basicConfig(filename="workflow_scripts/readme.md", level=logging.INFO)
 
 
@@ -45,3 +47,16 @@ open('workflow_scripts/readme.md', 'w').close()
 logging.info('Validating matches...\n')
 validate_matches()
 logging.info('Validating matches complete!\n')
+
+# Update versions.json
+with open('versions.json', 'r+') as f:
+    data = json.load(f)
+    current_version = data['data_version']
+    current_version_obj = Version(current_version)
+    current_version_list = list(current_version_obj.release)
+    current_version_list[-1] += 1
+    data['data_version'] = '.'.join(map(str, current_version_list))
+    print(data)
+    f.seek(0)
+    json.dump(data, f)
+    f.truncate()
