@@ -14,5 +14,7 @@ ERROR:root:Removing: Match 141317 does not have 5 characters on each teams!
 
 ERROR:root:Removing: Match 190579 does not have 5 characters on each teams!
 
+ERROR:root:Removing: Match 219679 does not have 5 characters on each teams!
+
 INFO:root:Validating matches complete!
 
