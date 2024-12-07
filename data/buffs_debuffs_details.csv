@@ -29,10 +29,11 @@ Buff,Skill Nullifier,Negates damage from skills.,"['c1143', 'c6062', 'c2019', 'c
 Buff,Explosives,"After attacking, plants bombs on the target for 2 turns. Dispelled after attacking.",['c6020']
 Buff,Flame Alchemist,lncreases Hit Chance and Attack by 20%. Flame Alchemist is dispelled after being attacked by an Ice elemental enemy.,['c1135']
 Buff,Oasis All-Ride Pass,Does not cost any Soul to activate the first Soulburn. Dispelled once the effect is activated.,['c1163']
+Buff,Special Friendship,"After attacking on the bearer's turn, a critical hit deals additional damage proportional to the bearer's max Health to the target.",['c1162']
 Buff,Escort,"The bearer receives 30% of the damage suffered by all allies in their place. When more than one damage distribution effect is granted, only the strongest effect is applied.","['c3004', 'c1125', 'c4004']"
 Buff,Vigor,Increase Attack and Defense by 30%.,"['c2089', 'c2085', 'c1047', 'c2071', 'c2047']"
 Buff,Hawk's Eye,Increases Speed and Critical Hit Damage by 30%.,['c1136']
-Buff,Continuous Heal,Recovers 15% of max Health at the start of every turn. This effect can stack.,"['c4042', 'c1117', 'c3044', 'c3053', 'c1031', 'c4044', 'c4041', 'c4051', 'c4013', 'c1054']"
+Buff,Continuous Heal,Recovers 15% of max Health at the start of every turn. This effect can stack.,"['c4042', 'c1117', 'c3044', 'c3053', 'c1031', 'c4044', 'c4041', 'c4051', 'c4013', 'c1054', 'c1162']"
 Buff,Stealth,"When there are other allies, cannot be targeted. When suffering an AoE attack, decrease damage suffered and is dispelled upon suffering damage.","['c1139', 'c4065', 'c1129', 'c2033', 'c1103', 'c1033', 'c1142', 'c5111', 'c6017', 'c1130', 'c3011', 'c1073', 'c1006', 'c6011', 'c1125', 'c3125', 'c2112', 'c1157', 'c2111', 'c2065', 'c2082']"
 Buff,Ice Cream,"After being attacked, recovers 20% of max Health. Dispelled after being attacked.",['c5082']
 Buff,Illusion,"When an ally capable of being attacked is still remaining, the caster cannot be selected as a target for attacks.",['c2050']
