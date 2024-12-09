@@ -84,12 +84,14 @@ def merge(csv_files):
 
 copy_file_if_unique('data/epic7_match_history.csv', 'match_histories')
 
+# Removing this from the workflow because the file became too large
+
 # Get files from the folder
-csvs = [join('match_histories', f) for f in listdir('match_histories') if isfile(join('match_histories', f))]
-print(csvs)
+#csvs = [join('match_histories', f) for f in listdir('match_histories') if isfile(join('match_histories', f))]
+#print(csvs)
 
 # Merge all CSVs
-final_csv = merge(csvs)
+#final_csv = merge(csvs)
 
 # Save the merged DataFrame to a new CSV
-final_csv.to_csv('data/epic7_match_history.csv', index=False)
+#final_csv.to_csv('data/epic7_match_history.csv', index=False)
