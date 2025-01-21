@@ -20,7 +20,7 @@ chrome_options.add_argument('--headless')
 driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=chrome_options)
 
 # Open the initial URL to establish session/cookies
-initial_url = 'https://epic7.gg.onstove.com/en/rank/hero'
+initial_url = 'https://epic7.onstove.com/en/gg/herorecord'
 driver.get(initial_url)
 
 WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, 'div.filterlist-wrap ul li')))
