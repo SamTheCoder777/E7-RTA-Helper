@@ -143,7 +143,7 @@ try:
 
     # Get Folders in the dataset (Characters)
     character_names = [f for f in os.listdir('dataset') if os.path.isdir(os.path.join('dataset', f))]
-    root_url = 'https://epic7.gg.onstove.com/en/herorecord/'
+    root_url = 'https://epic7.onstove.com/en/gg/herorecord/'
 
     data = []
 
