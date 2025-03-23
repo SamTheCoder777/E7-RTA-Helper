@@ -1,3 +1,6 @@
+> [!CAUTION]
+> As of **March 21, 2025** E7 Vault, a site I get character portrait for image recognition is closed. This means that the tool is no longer able to detect new skins/characters. If anyone have another source or method of getting lossless character portrait, please open a new issue or a discussion. Until I figure this out, update is **temporarily paused**, sorry for any inconvenience this may cause.
+
 <a id="readme-top"></a>
 
 <!-- PROJECT LOGO -->
