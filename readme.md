@@ -1,7 +1,7 @@
 > [!CAUTION]
 > **I have decided to stop developing this tool and move on to my other projects. However all scripts and codes are in this repository, so if anyone is interested, this tool can be updated and used normally.**
 
-> As of **March 21, 2025** E7 Vault, a site I get character portrait for image recognition is closed. This means that the tool is no longer able to detect new skins/characters. You may upload the images yourself in the folder to keep using the tool.
+> As of **March 21, 2025** E7 Vault, a site I get character portrait for image recognition is closed. This means that the tool is no longer able to detect new skins/characters. You may upload the images yourself in the folder to keep using the tool. The tool will also need a new training data (following the correct format), and trained which can be done with the training scripts in scripts folder. See the github actions for more details...
 
 <a id="readme-top"></a>
 
