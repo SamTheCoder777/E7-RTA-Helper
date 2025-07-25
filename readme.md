@@ -1,7 +1,17 @@
 > [!CAUTION]
 > **I have decided to stop developing this tool and move on to my other projects. However all scripts and codes are in this repository, so if anyone is interested, this tool can be updated and used normally.**
 
-> As of **March 21, 2025** E7 Vault, a site I get character portrait for image recognition is closed. This means that the tool is no longer able to detect new skins/characters. You may upload the images yourself in the folder to keep using the tool. The tool will also need a new training data (following the correct format), and trained which can be done with the get rec model script in workflow scripts folder. See the github actions for more details such as the env and requirements...
+> As of **March 21, 2025** E7 Vault, a site I get character portrait for image recognition is closed. This means that the tool is no longer able to detect new skins/characters. You may upload the images yourself in the folder to keep using the tool. The tool will also need a new training data (following the correct format), and trained which can be done with the get rec model script in workflow scripts folder. See the github actions for more details such as the python env and requirements...
+
+
+Important folders/files if you wish to self update
+- **dataset**: this is where all of the character images are stored for image recognition.
+- **data**: rec models and bunch of csvs needed for the software/training is stored here
+- **match_histories**: all match history csvs are stored here. These can be later merged with your updated match history csv if you wish with the training notebook
+- **workflow_script**: pretty much all of the scripts that you will need to self update the tool is here.
+	- **full_training_notebook.ipynb**: notebook that has codes that are needed for training rec model.
+	- **get_matches.py**: write top player's matches into csv. However, this script will need an update if you wish to use it as the official e7 match history website updated their code recently.
+ 	- other necessary updating scripts (other than get_matches.py and rec model training) can be ran with **.github/workflows/update_data.yml** github action or following similar steps with different tool
 
 <a id="readme-top"></a>
 
